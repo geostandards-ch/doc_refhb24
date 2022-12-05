@@ -12,6 +12,7 @@ ifndef::env-github[:toc: left]
 :sectnumlevels: 5
 :sectlinks:
 :sectanchors:
+:includedir: docs
 
 = INTERLIS 2.4 Referenzhandbuch
 Stefan Henrich <stefan.henrich@moflex.ch>
@@ -25,10 +26,10 @@ Stefan Henrich <stefan.henrich@moflex.ch>
 :chapter-label: // deprecated
 
 
-include::refhb24_0_vorwort.adoc[]
+include::{includedir}/refhb24_0_vorwort.adoc[]
 
-include::refhb24_1_grundprinzipien.adoc[]
+include::{includedir}/refhb24_1_grundprinzipien.adoc[]
 
-include::refhb24_2_beschreibungssprache.adoc[]
+include::{includedir}/refhb24_2_beschreibungssprache.adoc[]
 
-include::refhb24_3_sequentieller_transfer.adoc[]
+include::{includedir}/refhb24_3_sequentieller_transfer.adoc[]
