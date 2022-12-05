@@ -1,0 +1,26 @@
+== Grundprinzipien
+
+****
+Kapitel 1 steht, bis auf die verwendeten Grafiken, noch nicht online zur Verfügung.
+****
+
+.Datentransfer zwischen verschiedenen Datenbanken über gemeinsames Datenmodell (Datenschema) beschrieben mit gemeinsamer Datenbeschreibungssprache.
+image::img/refhb24_fig1.png[]
+
+.Spezialisierung der Modellierung eines Konzepts von Stufe Bund über kantonale (länderspezifische) bis lokale Stufe.
+image::img/refhb24_fig2.png[]
+
+.Vererbungs-Hierarchie von Adresse, Person und Gebäude.
+image::img/refhb24_fig3.png[]
+
+.Nachführung in der Primär-Datenbank und anschliessende Nachlieferung an Sekundär-Datenbanken (ein doppelter Pfeil bedeutet inkrementelle Nachlieferung).
+image::img/refhb24_fig4.png[]
+
+.Grafikdefinitionen, die einerseits auf Daten und Sichten und andererseits auf Signaturen aufbauen, um da-raus eine Grafik zu erzeugen (abstrahierte Darstellung).
+image::img/refhb24_fig5.png[]
+
+.Die verschiedenen Einsatzgebiete von INTERLIS (ein doppelter Pfeil bedeutet inkrementelle Nachlieferung).
+image::img/refhb24_fig6.png[]
+
+.Das kleine Beispiel Roads.
+image::img/refhb24_fig7.png[]
