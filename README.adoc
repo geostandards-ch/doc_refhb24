@@ -1,5 +1,4 @@
 ifndef::env-github[:toc: left]
-ifdef::env-github[:outfilesuffix: .adoc]
 :toc-title: Inhalt
 :toclevels: 5
 :figure-caption: Figur
@@ -26,7 +25,7 @@ Stefan Henrich <stefan.henrich@moflex.ch>
 :title-page:
 :chapter-label: // deprecated
 
-
+ifndef::env-github[]
 include::{includedir}/refhb24_0_vorwort.adoc[]
 
 include::{includedir}/refhb24_1_grundprinzipien.adoc[]
@@ -34,3 +33,4 @@ include::{includedir}/refhb24_1_grundprinzipien.adoc[]
 include::{includedir}/refhb24_2_beschreibungssprache.adoc[]
 
 include::{includedir}/refhb24_3_sequentieller_transfer.adoc[]
+endif::[]
