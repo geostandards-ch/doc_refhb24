@@ -119,7 +119,7 @@ ergibt die folgenden - mittels Konstanten beschriebenen - zulässigen Werte:
 #rot.dunkelrot #rot.orange #rot.karmin #gelb #gruen.hellgruen #gruen.dunkelgruen
 ----
 .Beispiel einer Aufzählung
-image::img/refhb24_fig8.png[]
+image::{includedir}/img/refhb24_fig8.png[]
 ====
 
 Eine Schachtelung wird in runden Klammern angegeben. Die Elementnamen jeder Schachtelung müssen eindeutig sein. Die Schachtelungstiefe ist frei wählbar.
@@ -198,7 +198,7 @@ Für die Aufbereitung von Plänen und Karten müssen die Positionen von Texten f
 Der Abstand Cap-Base entspricht der Höhe der Grossbuchstaben. Unterlängen befinden sich im Bereich von Base-Bottom.
 
 .Textausrichtung horizontal (`HALIGNMENT`) und vertikal (`VALIGNMENT`).
-image::img/refhb24_fig9.png[]
+image::{includedir}/img/refhb24_fig9.png[]
 
 Horizontales und vertikales Alignment können als folgende vordefinierte Aufzählung verstanden werden:
 
@@ -583,10 +583,10 @@ Exakte Definition (mathematische Begriffe, die nicht weiter erklärt werden, der
 --
 
 .Beispiele von ebenen Kurvenstücken.
-image::img/refhb24_fig10.png[]
+image::{includedir}/img/refhb24_fig10.png[]
 
 .Beispiele von ebenen Mengen, die nicht Kurvenstücke sind (ein doppelter Kreis bedeutet "nicht glatt" und ein doppeltes Rechteck "nicht injektiv").
-image::img/refhb24_fig11.png[]
+image::{includedir}/img/refhb24_fig11.png[]
 
 Ein Linienzug ist eine endliche Folge von Kurvenstücken. Ausser beim ersten Kurvenstück stimmt der Anfangspunkt jeweils mit dem Endpunkt des Vorgänger-Kurvenstückes überein. Diese Punkte heissen Stützpunkte des Linienzuges. Anschaulich kann ein Linienzug mehrfach benützte Kurvenstücke, Kurvenstücke mit zusammenfallenden Stützpunkten, sich schneidende Kurvenstücke und im Innern von Kurvenstücken endende oder startende Kurvenstücke enthalten (siehe Figuren 12 und 13). Ein einfacher Linienzug weist keinerlei Selbst-Schnittpunkte auf (siehe Figur 14). Bei einem einfach geschlossenen Linienzug stimmt zudem der Anfangspunkt des ersten Kurvenstücks mit dem Endpunkt des letzten überein.
 
@@ -596,13 +596,13 @@ Exakte Definition (mathematische Begriffe, die nicht weiter erklärt werden, der
 --
 
 .Beispiele von (ebenen) Linienzügen.
-image::img/refhb24_fig12.png[]
+image::{includedir}/img/refhb24_fig12.png[]
 
 .Beispiele von ebenen Mengen, die nicht Linienzüge sind (ein doppelter Kreis bedeutet hier "nicht stetig" und der Rhombus "nicht Bild eines Intervalls").
-image::img/refhb24_fig13.png[]
+image::{includedir}/img/refhb24_fig13.png[]
 
 .Beispiele von (ebenen) einfachen Linienzügen.
-image::img/refhb24_fig14.png[]
+image::{includedir}/img/refhb24_fig14.png[]
 
 ===== Linienzug mit Strecken und Kreisbogen als vordefinierte Kurvenstücke
 INTERLIS 2 kennt gerichtete (`DIRECTED POLYLINE`), ungerichtete (`POLYLINE`) oder eine Menge von ungerichteten (`MULTIPOLYLINE`) Linienzügen. Bei einem einzelnen Linienzug (`[DIRECTED] POLYLINE`) sind aber beim Transfer eines Ausschnittes auch `MULTIPOLYLINE` zulässig (vgl. Kapitel 3.3.6 Codierung von Themen). Bei einer Menge von Linienzügen (`MULTIPOLYLINE`) müssen die einzelnen Linienzüge nicht miteinander verbunden sein. Zudem werden Linienzüge im Rahmen von Einzelflächen und Gebietseinteilungen (vgl. Kapitel 2.8.13 Einzelflächen und Gebietseinteilungen) verwendet.
@@ -643,7 +643,7 @@ Um beide Anliegen zu unterstützen, wird die Überlappungsfreiheit wie folgt ger
 Wenn ein Kreisbogen und eine Strecke (bzw. ein anderer Kreisbogen) als aufeinander folgende Kurvenstücke eines Linienzuges neben dem gemeinsamen Stützpunkt auch noch einen inneren Punkt (keinen Stützpunkt) gemeinsam haben, so ist das auch bei einem einfachen Linienzug erlaubt, falls das von der Strecke abgeschnittene Kreissegment (bzw. das vom anderen Kreisbogen abgeschnittene Doppel-Kreissegment) eine Pfeilhöhe aufweist, die kleiner oder gleich der definierten Toleranz ist. Fehlt die Toleranzangabe, gilt der Wert gemäss den technischen Überlegungen (vgl. oben). Bei expliziter Angabe (auf WITHOUT OVERLAPS > folgende Dezimalzahl) muss sie mit derselben numerischen Bedeutung wie diejenige der Stützpunktkoordinaten erfolgen und einen Wert grösser Null aufweisen.
 
 .a) Die Pfeilhöhe darf nicht grösser als die angegebene Toleranz sein; b), c) unzulässige Überschneidungen eines Linienzuges, da Strecke und Kreisbogen, die sich treffen, nicht von einem gemeinsamen Stützpunkt ausgehen.
-image::img/refhb24_fig15.png[]
+image::{includedir}/img/refhb24_fig15.png[]
 
 Bei Einzelflächen und Gebietseinteilung ist die Überlappungsfreiheit zwingend. Bei Verwendung der impliziten Toleranz kann deshalb auf `WITHOUT OVERLAPS` verzichtet werden.
 
@@ -713,34 +713,34 @@ Eine _allgemeine Fläche_ ist eine Fläche mit zusätzlich endlich vielen _singu
 --
 
 .Beispiele von Flächenelementen.
-image::img/refhb24_fig16.png[]
+image::{includedir}/img/refhb24_fig16.png[]
 
 .Beispiele von Punktmengen im Raum, die nicht Flächenelemente sind (ein doppelter Kreis bedeutet hier "nicht glatt").
-image::img/refhb24_fig17.png[]
+image::{includedir}/img/refhb24_fig17.png[]
 
 .Beispiele von Flächen im Raum.
-image::img/refhb24_fig18.png[]
+image::{includedir}/img/refhb24_fig18.png[]
 
 .Beispiele ebener Punktmengen, die nicht Flächen sind (ein doppelter Kreis bedeutet "singulärer Punkt").
-image::img/refhb24_fig19.png[]
+image::{includedir}/img/refhb24_fig19.png[]
 
 .Ebene Fläche mit Rändern und Enklaven.
-image::img/refhb24_fig20.png[]
+image::{includedir}/img/refhb24_fig20.png[]
 
 .a) Beispiele von allgemeinen ebenen Flächen; b) Beispiele von ebenen Mengen, die nicht allgemeine Flächen sind, weil ihr Inneres nicht zusammenhängend ist. Diese ebenen Mengen können aber in allgemeine Flächen unterteilt werden ("---" zeigt die Unterteilung in Flächenelemente und "===" die Unterteilung in allgemeine Flächen).
-image::img/refhb24_fig21.png[]
+image::{includedir}/img/refhb24_fig21.png[]
 
 .Verschiedene mögliche Aufteilungen des Randes einer allgemeinen Fläche.
-image::img/refhb24_fig22.png[]
+image::{includedir}/img/refhb24_fig22.png[]
 
 Mit der Definition von (allgemeinen) Einzelflächen bzw. (allgemeinen) Flächen einer Gebietseinteilung wird auch festgelegt, oberhalb welcher Toleranz sich die Kurvenstücke des Randes nicht überlappen dürfen (ohne Angabe von `WITHOUT OVERLAPS` gilt die implizite bzw. die geerbte Toleranz). Das Überlappungs- bzw. Schnittverbot gilt bei Einzelflächen nicht nur zwischen den Kurvenstücken eines einzelnen Linienzuges sondern zwischen allen Kurvenstücken aller Linienzüge des Flächenrandes. Für Flächen einer Gebietseinteilung gilt es sogar für alle an der Gebietseinteilung beteiligten Linienzüge. Zudem sind Linienzüge, die nicht zum Rand einer (allgemeinen) Fläche gehören, gemäss Definition der (allgemeinen) Fläche ausgeschlossen.
 
 .Nicht erlaubte Linien von Flächen.
-image::img/refhb24_fig23.png[]
+image::{includedir}/img/refhb24_fig23.png[]
 
 ===== Einzelflächen
 .Einzelflächen (`SURFACE`).
-image::img/refhb24_fig24.png[]
+image::{includedir}/img/refhb24_fig24.png[]
 
 Für (allgemeine) Flächen, die sich ganz oder teilweise überlappen dürfen, d.h. die nicht nur Randpunkte gemeinsam haben dürfen, steht der geometrische Attributtyp `SURFACE` zur Verfügung (siehe Figur 24). Dieser Typ wird Einzelflächen genannt. Eine Einzelfläche hat einen äusseren und allenfalls mehrere inneren Ränder (um die Enklaven). Jeder Rand besteht aus mindestens einem Linienzug.
 
@@ -748,7 +748,7 @@ Mit dem Attributtyp `MULTISURFACE` kann auch eine Menge von Einzelflächen als e
 
 ===== Flächen einer Gebietseinteilung
 .Gebietseinteilung (`AREA`).
-image::img/refhb24_fig25.png[]
+image::{includedir}/img/refhb24_fig25.png[]
 
 _Gebietseinteilung (Flächennetz)_ heisst eine endliche Menge von (allgemeinen) Flächen und Restflächen, welche die Ebene überlappungsfrei überdecken.
 
