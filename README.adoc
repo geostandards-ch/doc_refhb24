@@ -25,6 +25,7 @@ Stefan Henrich <stefan.henrich@moflex.ch>
 :title-page:
 :chapter-label: // deprecated
 
+// Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
 ifndef::env-github[]
 include::{includedir}/refhb24_0_vorwort.adoc[]
 
@@ -33,4 +34,11 @@ include::{includedir}/refhb24_1_grundprinzipien.adoc[]
 include::{includedir}/refhb24_2_beschreibungssprache.adoc[]
 
 include::{includedir}/refhb24_3_sequentieller_transfer.adoc[]
+endif::[]
+
+// Erklärung und Link auf Website
+ifdef::env-github[]
+In diesem Repository wird die Online-Version des INTERLIS 2.4 Referenzhandbuches gepflegt. Die Quelldateien der einzelnen Haupt- und Unterkapitel befinden sich im Verzeichnis `docs`. Ergänzungen und Korrekturen bitte als Issue oder allenfalls PR erfassen.
+
+Die aktuelle Website ist unter https://geostandards-ch.github.io/doc_refhb24/ erreichbar.
 endif::[]
