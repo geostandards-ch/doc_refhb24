@@ -16,11 +16,9 @@ ifndef::env-github[:toc: left]
 
 = INTERLIS 2.4 Referenzhandbuch
 Stefan Henrich <stefan.henrich@moflex.ch>
-
 // Versionierung
 :revdate: {docdate}
-:revnumber: v0.1 
-:version-label!:
+:revnumber: 0.1.1
 // Pdf output
 :title-page:
 :chapter-label: // deprecated

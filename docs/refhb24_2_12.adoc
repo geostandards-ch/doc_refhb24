@@ -42,7 +42,7 @@ Mit Konsistenzbedingungen, die sich auf die Klasse beziehen (`SET CONSTRAINT`), 
 CLASS B =
   Art: (a, b, c);
   Geometrie: SURFACE ...;
-SET CONSTRAINT WHERE Art = #a :
+SET CONSTRAINT WHERE Art == #a :
   areAreas(ALL, UNDEFINED, >> Geometrie);
 END B;
 
