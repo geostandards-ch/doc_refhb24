@@ -56,7 +56,7 @@ Die Implikation (\=>) ist nur dann false, wenn der erste Term true und der zweit
 CLASS A =
   Status: (gueltig, projektiert);
   Geometrie: SURFACE ...;
-MANDATORY CONSTRAINT Status == gueltig => DEFINED(Geometrie);
+MANDATORY CONSTRAINT Status == #gueltig => DEFINED(Geometrie);
 END A;
 ----
 ====
