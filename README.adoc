@@ -18,7 +18,7 @@ ifndef::env-github[:toc: left]
 Stefan Henrich <stefan.henrich@moflex.ch>
 // Versionierung
 :revdate: {docdate}
-:revnumber: 0.1.1
+:revnumber: 0.1.2
 // Pdf output
 :title-page:
 :chapter-label: // deprecated
