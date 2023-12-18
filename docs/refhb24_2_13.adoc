@@ -48,7 +48,7 @@ Bemerkungen zur Bedeutung der Syntaxregeln:
 
 * Ein Ausdruck wird von links nach rechts nur soweit ausgewertet bis dessen Resultatwert klar ist. Mit `OR` verbundene Folgeterme werden also nur ausgewertet, wenn der bisherige Wert falsch ist. Mit `AND` verbundene Folgeterme werden dementsprechend nur ausgewertet, wenn der bisherige Wert wahr ist.
 
-Die Implikation (\=>) ist nur dann false, wenn der erste Term true und der zweite Term false ist. `a \=> b` ist identisch mit folgender Formulierung: `NOT(a) OR b`. Das wird typischerweise verwendet, um bedingte Einschränkungen zu formulieren. Zum Beipsiel: Die Geometrie ist nur bei einem bestimmten Status obligatorisch.
+Die Implikation (`={gt}`) ist nur dann false, wenn der erste Term true und der zweite Term false ist. `a ={gt} b` ist identisch mit folgender Formulierung: `NOT(a) OR b`. Das wird typischerweise verwendet, um bedingte Einschränkungen zu formulieren. Zum Beispiel: Die Geometrie ist nur bei einem bestimmten Status obligatorisch.
 
 .Beispiel:
 ====
