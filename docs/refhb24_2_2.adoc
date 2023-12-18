@@ -86,7 +86,7 @@ Um zu definieren, dass an einer bestimmten Stelle einer Syntaxregel solche Eigen
 'Properties' '<' Property-Keyword { ',' Property-Keyword } '>'
 ----
 
-Man schreibt also "Properties" und definiert in spitzen Klammern die zulässigen Schlüsselwörter. Nimmt man als Beispiel die Regel ClassDef (vgl. Kapitel 2.5.3 Klassen und Strukturen) werden mit `"Properties<ABSTRACT,EXTENDED,FINAL>" die Schlüsselwörter `"ABSTRACT"`, `"EXTENDED"` und `"FINAL"` für die Beschreibung von Eigenschaften akzeptiert. In einer INTERLIS 2-Definition wären dann unter anderem folgende Definitionen möglich:
+Man schreibt also "Properties" und definiert in spitzen Klammern die zulässigen Schlüsselwörter. Nimmt man als Beispiel die Regel ClassDef (vgl. Kapitel 2.5.3 Klassen und Strukturen) werden mit `"Properties<ABSTRACT,EXTENDED,FINAL>"` die Schlüsselwörter `"ABSTRACT"`, `"EXTENDED"` und `"FINAL"` für die Beschreibung von Eigenschaften akzeptiert. In einer INTERLIS 2-Definition wären dann unter anderem folgende Definitionen möglich:
 
 ----
 CLASS A (ABSTRACT) = .....
