@@ -26,7 +26,7 @@ Relation = ( '==' | '!=' | '<>' | '<=' | '>=' | '<' | '>' ).
 
 Bemerkungen zur Bedeutung der Syntaxregeln:
 
-* Entsprechend der Syntaxregeln für die Terme bindet der Vergleich (Relation) am stärksten, dann `AND` bzw. `\*` und `/`, dann `OR` bzw. `+++++` und `++-++`, dann die Implikation (`++=>++`). `AND` und `OR` können nur mit boolschen Prädikaten, `+++++`, `++-++`, `*` und `/` können nur mit numerischen Prädikaten verwendet werden.
+* Entsprechend der Syntaxregeln für die Terme bindet der Vergleich (Relation) am stärksten, dann `AND` bzw. `\*` und `/`, dann `OR` bzw. ``+`` und ``-``, dann die Implikation (``=>``). `AND` und `OR` können nur mit boolschen Prädikaten, ``+``, `-`, `*` und `/` können nur mit numerischen Prädikaten verwendet werden.
 
 * Mit `NOT` und dem darauf in Klammer folgenden logischen Ausdruck wird die Verneinung dieses Ausdrucks verlangt.
 
