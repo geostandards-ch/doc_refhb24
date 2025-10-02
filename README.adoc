@@ -13,6 +13,10 @@ ifndef::env-github[:toc: left]
 :sectlinks:
 :sectanchors:
 :includedir: docs
+// Format der Referenzen auf andere Kapitel
+:xrefstyle: full
+:chapter-refsig: Kapitel
+:section-refsig: Kapitel
 
 = INTERLIS 2.4 Referenzhandbuch
 Stefan Henrich <stefan.henrich@moflex.ch>
