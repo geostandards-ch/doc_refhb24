@@ -64,8 +64,9 @@ Weitergehende Konsistenzbedingungen müssen mittels Sichten (z.B. Sicht, die ein
 Konsistenzbedingungen, die sich auf eine Vielzahl von Objekten erstrecken (insbesondere Eindeutigkeitsbedingungen), sind nicht immer vollständig prüfbar, weil die Prüfung nur mit den lokal verfügbaren Behältern durchgeführt werden kann. Konzeptionell gelten sie aber (ausser bei Metamodellen) dennoch global (vgl. Anhang G Eindeutigkeit von Benutzerschlüsseln).
 
 ++++
-<a href="#2_12_C1">&#x203B</a>
+<a href="#3_12_C1">&#x203B</a>
 ++++
+[#3_12_C1]
 [#2_12_C1]
 .Syntaxregeln:
 ----
@@ -110,8 +111,9 @@ SetConstraint = 'SET' 'CONSTRAINT' [ '(' 'BASKET' ')' ]
 Konsistenzbedingungen für eine bestimmte Klasse oder Assoziation können auch erst nachträglich, aber innerhalb desselben TOPIC (typischerweise nach der Definition einer Assoziation), definiert werden.
 
 ++++
-<a href="#2_12_C2">&#x203B</a>
+<a href="#3_12_C2">&#x203B</a>
 ++++
+[#3_12_C2]
 [#2_12_C2]
 .Syntaxregel:
 ----

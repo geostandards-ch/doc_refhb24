@@ -11,8 +11,9 @@ Wird der Bezug auf ein Metaobjekt (Regel MetaObjectRef) unter dem erweiterten Be
 In einem übersetzten Anwendungsmodell (vgl. Kapitel 2.5.1 Modelle), kann einem Behälternamen auch ein konkreter Behälter zugewiesen werden, der nur Übersetzungen enthält (METAOBJECT_TRANSLATION Objekte; vgl. Anhang A Das interne INTERLIS-Datenmodell). Damit werden diejenigen Metaobjekte übersetzt, die durch den entsprechenden Behälter im zu Grunde liegenden Modell eingeführt wurden. Ist das zu Grunde liegende Modell selbst eine Übersetzung, kann auch da dem Behälternamen ein konkreter Behälter zugewiesen sein, der nur Übersetzungen enthält. Ist das Modell keine Übersetzung, kann einem Behälternamen nur ein konkreter Behälter zugewiesen werden, der keine Übersetzungen (d.h. keine METAOBJECT_TRANSLATION Objekte) enthält.
 
 ++++
-<a href="#2_10_C1">&#x203B</a>
+<a href="#3_10_C1">&#x203B</a>
 ++++
+[#3_10_C1]
 [#2_10_C1]
 .Syntaxregeln:
 ----
@@ -44,8 +45,9 @@ Die Parameter von Signaturen sind frei definierbar. Diese Parameter entsprechen 
 Nebst diesen speziellen Parametern können Parameter gleich wie Attribute definiert werden.
 
 ++++
-<a href="#2_10_C2">&#x203B</a>
+<a href="#3_10_C2">&#x203B</a>
 ++++
+[#3_10_C2]
 [#2_10_C2]
 .Syntaxregel:
 ----

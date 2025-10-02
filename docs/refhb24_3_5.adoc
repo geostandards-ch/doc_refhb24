@@ -18,8 +18,9 @@ Mit der Angabe `NOINCREMENTALTRANSFER` wird definiert, dass beim Datentransfer (
 Anschliessend wird mittels Angabe des entsprechenden URI (vgl. Kapitel 2.8.1 Zeichenketten) der Herausgeber des Modells identifiziert. Es wird erwartet, dass der Modellname in diesem Kontext eindeutig ist.
 
 ++++
-<a href="#2_5_C1">&#x203B</a>
+<a href="#3_5_C1">&#x203B</a>
 ++++
+[#3_5_C1]
 [#2_5_C1]
 .Syntaxregel:
 ----
@@ -63,8 +64,9 @@ Mit der Sprache verbunden ist auch ein vordefiniertes Basis-Modell "INTERLIS" (v
 Ein Thema (Schlüsselwort `TOPIC`) enthält alle zur Beschreibung eines bestimmten sachlichen Teils der Realwelt nötigen Definitionen. Ein Thema kann auch Typen wie Masseinheiten, Wertebereiche oder Strukturen definieren oder diese vom umhüllenden Modell oder einem importierten Modell benützen. In runden Klammern können die Vererbungseigenschaften definiert werden. Enthält ein Thema abstrakte Definitionen, die nicht im selben Thema konkretisiert werden, muss das Thema als ABSTRACT deklariert werden. Abstrakte Definitionen müssen dann in konkreten Erweiterungen des Themas noch konkretisiert werden. Für einen Datentransfer braucht es ein konkretes Thema. Da sich eine Erweiterung eines Themas immer auf ein Thema mit einem anderen Namen bezieht, macht `EXTENDED` keinen Sinn und ist deshalb nicht zulässig.
 
 ++++
-<a href="#2_5_C2">&#x203B</a>
+<a href="#3_5_C2">&#x203B</a>
 ++++
+[#3_5_C2]
 [#2_5_C2]
 .Syntaxregeln:
 ----
@@ -129,8 +131,9 @@ Wird eine einzelne Klasse und nicht ein ganzes Thema geerbt, dürfen keine Bezie
 Erweitert ein Thema ein anderes, werden alle Klassen des geerbten Themas übernommen. Sie werden also zu Klassen des aktuellen Themas und haben denselben Namen wie im geerbten Thema. Eine solche Klasse kann auch unter Beibehaltung ihres Namens erweitert werden (`EXTENDED`). Erweitert z.B. ein Thema T2 das Thema T1, das die Klasse C enthält, gibt es mit C (EXTENDED) innerhalb von T2 nur eine Klasse, nämlich C. Neue Klassen, die sich namensmässig von den geerbten unterscheiden müssen, dürfen auch geerbte erweitern. Mit C2 EXTENDS C, gibt es dann in T2 zwei Klassen (C und C2). Da INTERLIS im Interesse von Einfachheit und Klarheit nur Einfachvererbung unterstützt, ist `EXTENDED` allerdings nur zulässig, wenn weder im Basis-Thema noch im aktuellen Thema die Basis-Klasse mit `EXTENDS` erweitert wurde. `EXTENDED` und `EXTENDS` schliessen sich in der gleichen Klassendefinition aus.
 
 ++++
-<a href="#2_5_C3">&#x203B</a>
+<a href="#3_5_C3">&#x203B</a>
 ++++
+[#3_5_C3]
 [#2_5_C3]
 .Syntaxregeln:
 ----

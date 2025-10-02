@@ -8,8 +8,9 @@ Sichten können abstrakt (`ABSTRACT`) oder konkret sein. Konkrete Sichten könne
 Sichten können auch erweitert werden (`EXTENDED` oder `EXTENDS`). Dabei ist es allerdings nicht möglich das Bildungsgesetz zu verändern. Die Erweiterung dient dazu, Erweiterungen der Sichten, Klassen und Strukturen, auf der die Sicht aufbaut, so zur Kenntnis zu nehmen, dass weitere Selektionen, Attribute und Konsistenzbedingungen formuliert werden können.
 
 ++++
-<a href="#2_15_C1">&#x203B</a>
+<a href="#3_15_C1">&#x203B</a>
 ++++
+[#3_15_C1]
 [#2_15_C1]
 .Syntaxregeln: 
 ----
@@ -66,8 +67,9 @@ Dies heisst, dass das erste Kurvenstück ein so genanntes StartSegment der Läng
 Mit INTERLIS wird nur eine konzeptionelle Beschreibung der Sicht gemacht. Es wird ausdrücklich nichts unternommen, um eine effiziente Realisierung der Sichten zu unterstützen. Sichten generieren gehört deshalb auch zu einer speziellen Erfüllungsstufe.
 
 ++++
-<a href="#2_15_C2">&#x203B</a>
+<a href="#3_15_C2">&#x203B</a>
 ++++
+[#3_15_C2]
 [#2_15_C2]
 .Syntaxregeln:
 ----
@@ -97,8 +99,9 @@ Inspection = [ 'AREA' ] 'INSPECTION' 'OF' RenamedViewableRef
 Alle in einer Sicht verwendeten Basissichten erhalten innerhalb der verwendenden Sicht einen Namen, unter dem sie angesprochen werden können. Dieser Name entspricht dem Namen der Basissicht, sofern keine Umbenennung mittels eines expliziten (lokalen) Base-Namens definiert wird. Eine solche Umbenennung ist insbesondere nötig, wenn Verbindungen definiert werden, bei denen mehrmals die gleiche Basisklasse angesprochen wird.
 
 ++++
-<a href="#2_15_C3">&#x203B</a>
+<a href="#3_15_C3">&#x203B</a>
 ++++
+[#3_15_C3]
 [#2_15_C3]
 .Syntaxregeln:
 ----
@@ -114,8 +117,9 @@ ViewableRef = [ Model-Name '.' [ Topic-Name '.' ] ]
 Will man in einer Sicht bzw. einer Sichterweiterung Erweiterungen von Basisklassen berücksichtigen und damit zusätzliche Attribute, Selektionen oder Konsistenzbedingungen formulieren, muss eine entsprechende Erweiterungsdefinition (BaseExtensionDef) aufgeführt werden. Sie geht von einer bereits definierten Basissicht aus und beschreibt die Erweiterungen (müssen Erweiterungen der bisherigen Basissicht sein) selbst wieder als Basissichten. Wird eine solche Sichterweiterung innerhalb von Ausdrücken verwendet, liefert sie den Wert "UNDEFINED", wenn das zum virtuellen Objekt gehörige Basisobjekt nicht zu dieser Sichterweiterung passt.
 
 ++++
-<a href="#2_15_C4">&#x203B</a>
+<a href="#3_15_C4">&#x203B</a>
 ++++
+[#3_15_C4]
 [#2_15_C4]
 .Syntaxregel:
 ----
@@ -126,8 +130,9 @@ BaseExtensionDef = 'BASE' Base-Name 'EXTENDED' 'BY'
 Die durch das Bildungsgesetz definierte Menge der Sichtobjekte kann mittels Bedingungen (Schlüsselwort `WHERE`) zusätzlich eingeschränkt werden.
 
 ++++
-<a href="#2_15_C5">&#x203B</a>
+<a href="#3_15_C5">&#x203B</a>
 ++++
+[#3_15_C5]
 [#2_15_C5]
 .Syntaxregel:
 ----
@@ -137,8 +142,9 @@ Selection = 'WHERE' Logical-Expression ';'.
 Was die Attribute (und damit die Empfängersicht) und die Konsistenzbedingungen betrifft, sind Sichten grundsätzlich gleich aufgebaut, wie Klassen und Strukturen. Im Sinne einer Schreiberleichterung wird zusätzlich die Möglichkeit angeboten, alle Attribute und Rollen einer Sichtbasis in der gleichen Reihenfolge zu übernehmen (`ALL OF`). Dies ist bei Vereinigungen und bei AREA-Inspektionen unsinnig und darum auch unzulässig.
 
 ++++
-<a href="#2_15_C6">&#x203B</a>
+<a href="#3_15_C6">&#x203B</a>
 ++++
+[#3_15_C6]
 [#2_15_C6]
 .Syntaxregel:
 ----

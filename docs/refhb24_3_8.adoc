@@ -23,8 +23,9 @@ Bei der Definition eines Attributs einer Klasse oder Struktur (und nur dort) dar
 Mit dem Schlüsselwort `CONSTRAINTS` kann die Wertebereichsdefinition um eine oder mehrere Einschränkungen ergänzt werden, um z.B. bei einem Textwertebereich nur bestimmte Zeichenfolgenmuster zuzulassen. Werden mehrere Einschränkungen gemacht, gelten alle. Jede Einschränkung hat innerhalb der Wertebereichsdefinition einen eindeutigen Namen.
 
 ++++
-<a href="#2_8_C1">&#x203B</a>
+<a href="#3_8_C1">&#x203B</a>
 ++++
+[#3_8_C1]
 [#2_8_C1]
 .Syntaxregeln:
 ----
@@ -90,8 +91,9 @@ DOMAIN
 ----
 
 ++++
-<a href="#2_8_C2">&#x203B</a>
+<a href="#3_8_C2">&#x203B</a>
 ++++
+[#3_8_C2]
 [#2_8_C2]
 .Syntaxregeln:
 ----
@@ -141,8 +143,9 @@ DOMAIN
 ====
 
 ++++
-<a href="#2_8_C3">&#x203B</a>
+<a href="#3_8_C3">&#x203B</a>
 ++++
+[#3_8_C3]
 [#2_8_C3]
 .Syntaxregeln:
 ----
@@ -209,8 +212,9 @@ DOMAIN
 ----
 
 ++++
-<a href="#2_8_C4">&#x203B</a>
+<a href="#3_8_C4">&#x203B</a>
 ++++
+[#3_8_C4]
 [#2_8_C4]
 .Syntaxregel:
 ----
@@ -226,8 +230,9 @@ DOMAIN
 ----
 
 ++++
-<a href="#2_8_C5">&#x203B</a>
+<a href="#3_8_C5">&#x203B</a>
 ++++
+[#3_8_C5]
 [#2_8_C5]
 .Syntaxregel:
 ----
@@ -292,8 +297,9 @@ Stellt der numerische Wert einen Winkel dar, kann sein Richtungssinn festgelegt 
 Als numerische Konstanten sind nebst den Dezimalzahlen auch die Zahlen Pi (Schlüsselwort `PI`) und e – Basis des natürlichen Logarithmus – (Schlüsselwort `LNBASE`) definiert.
 
 ++++
-<a href="#2_8_C6">&#x203B</a>
+<a href="#3_8_C6">&#x203B</a>
 ++++
+[#3_8_C6]
 [#2_8_C6]
 .Syntaxregeln:
 ----
@@ -313,8 +319,9 @@ NumericConst = DecConst [ '[' UnitRef ']' ].
 Formatierte Wertebereiche basieren auf Strukturen und verwenden deren numerische oder formatierte Attribute in einem Format. Dieses Format dient einerseits dem Datenaustausch (vgl. 3.3.11.5 Codierung von formatierten Wertebereichen), andererseits der Definition von unterer und oberer Grenze des Wertebereichs.
 
 ++++
-<a href="#2_8_C7">&#x203B</a>
+<a href="#3_8_C7">&#x203B</a>
 ++++
+[#3_8_C7]
 [#2_8_C7]
 .Syntaxregeln:
 ----
@@ -345,8 +352,9 @@ In der Formatdefinition können einerseits konstante Strings, die nicht mit eine
 Wo Datums- oder Zeitangaben nicht nur aus einem einzigen Wert (z.B. Jahr, Sekunde) bestehen, werden üblicherweise formatierte Wertebereiche verwendet.
 
 ++++
-<a href="#2_8_C8">&#x203B</a>
+<a href="#3_8_C8">&#x203B</a>
 ++++
+[#3_8_C8]
 [#2_8_C8]
 .Syntaxregel:
 ----
@@ -439,8 +447,9 @@ Geografische Koordinaten sind typischerweise in Grad dargestellt und beziehen si
 ====
 
 ++++
-<a href="#2_8_C9">&#x203B</a>
+<a href="#3_8_C9">&#x203B</a>
 ++++
+[#3_8_C9]
 [#2_8_C9]
 .Syntaxregeln:
 ----
@@ -475,8 +484,9 @@ Das Thema (`TOPIC`), zu dem eine solche Definition gehört, muss aber als abstra
 Mit einer Kontextdefinition können für einen generischen Koordinaten-Wertebereich (Generic-CoordDef-DomainRef) konkrete Koordinaten-Wertebereiche definiert werden. Wurde für einen generischen Koordinaten-Wertebereich nicht nur ein einzelner, sondern eine Auswahl von möglichen konkreten Koordinaten-Wertebereichen festgelegt, wird beim Transfer des einzelnen Behälters, der für diesen Behälter geltende Wertebereich festgehalten (vgl. Kapitel 3.3.6 Codierung von Themen). Die Tatsache, dass die Festlegung aufgeschoben ist, muss beim Thema angemerkt werden (vgl. Kapitel 2.5.2 Themen). Der letztlich gültige konkrete Koordinaten-Wertebereich gilt bei allen Verwendungen des generischen Koordinaten-Wertebereichs und bei allen Verwendungen von Linien-Wertebereichen, die auf dem generischen Koordinaten-Wertebereich basieren.
 
 ++++
-<a href="#2_8_C10">&#x203B</a>
+<a href="#3_8_C10">&#x203B</a>
 ++++
+[#3_8_C10]
 [#2_8_C10]
 .Syntaxregel:
 ----
@@ -505,8 +515,9 @@ CONTEXT default =
 Identifizierbare Objekte werden immer mit einer Objektidentifikation versehen. Damit für die Systeme klar ist, welcher Speicherplatz dafür vorgesehen werden muss und wie die Objektidentifikationen erzeugt werden müssen, können entsprechende Wertebereiche definiert und diese den Themen bzw. Klassen (vgl. Kapitel 2.5.2 Themen und Kapitel 2.5.3 Klassen und Strukturen) zugeordnet werden. Für die Verwaltung von Objektidentifikationen, insbesondere auch von Behältern, macht es aber Sinn, gewöhnliche Attribute mit solchen Wertebereichen zu führen.
 
 ++++
-<a href="#2_8_C11">&#x203B</a>
+<a href="#3_8_C11">&#x203B</a>
 ++++
+[#3_8_C11]
 [#2_8_C11]
 .Syntaxregel:
 ----
@@ -534,8 +545,9 @@ Wird `ANYOID` für abstrakte Themen bzw. Klassen angewendet, wird verlangt, dass
 Durch Einsatz dieses Datentyps können Attribute modelliert werden, deren Inhalt nicht spezifiziert werden kann. Die Variante `XML` beschreibt ein Attribut mit XML-Inhalt und die Variante `BINARY` einen binären Inhalt. Dieser Typ kann in Erweiterungen nicht verfeinert werden.
 
 ++++
-<a href="#2_8_C12">&#x203B</a>
+<a href="#3_8_C12">&#x203B</a>
 ++++
+[#3_8_C12]
 [#2_8_C12]
 .Syntaxregel:
 ----
@@ -546,8 +558,9 @@ BlackboxType = 'BLACKBOX' ( 'XML' | 'BINARY' ).
 Es kann Sinn machen, dass Datenobjekte Verweise auf bestimmte Klassen und Attribute enthalten.
 
 ++++
-<a href="#2_8_C13">&#x203B</a>
+<a href="#3_8_C13">&#x203B</a>
 ++++
+[#3_8_C13]
 [#2_8_C13]
 .Syntaxregeln:
 ----
@@ -656,8 +669,9 @@ Für die Stützpunkte wird der Wertebereich der Koordinaten definiert. Mittels d
 Ist der Koordinatentyp der Stützpunkte abstrakt, muss der Linienzug seinerseits als abstrakt deklariert werden.
 
 ++++
-<a href="#2_8_C14">&#x203B</a>
+<a href="#3_8_C14">&#x203B</a>
 ++++
+[#3_8_C14]
 [#2_8_C14]
 .Syntaxregeln:
 ----
@@ -687,8 +701,9 @@ DOMAIN
 Nebst Geradenstücken und Kreisbogen sind weitere Kurvenstück-Formen definierbar. Nebst dem Namen muss angegeben werden, gemäss welcher Struktur ein Kurvenstück beschrieben wird.
 
 ++++
-<a href="#2_8_C15">&#x203B</a>
+<a href="#3_8_C15">&#x203B</a>
 ++++
+[#3_8_C15]
 [#2_8_C15]
 .Syntaxregeln
 ----

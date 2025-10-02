@@ -4,8 +4,9 @@ Jede Beschreibungseinheit beginnt mit der Angabe der Sprach-Version. Damit wird 
 Nachher folgen die Modellbeschreibungen.
 
 ++++
-<a href="#2_3_C1">&#x203B</a>
+<a href="#3_3_C1">&#x203B</a>
 ++++
+[#3_3_C1]
 [#2_3_C1]
 .Syntaxregel:
 ----

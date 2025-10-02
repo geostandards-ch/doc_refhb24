@@ -4,8 +4,9 @@ Eigentliche Beziehungen (im Gegensatz zu Referenzattributen; vgl. Kapitel 2.6 At
 
 Beispiel einer Beziehung, zwischen der Klasse K einerseits und den Klassen K oder L andererseits:
 ++++
-<a href="#2_7_C1">&#x203B</a>
+<a href="#3_7_C1">&#x203B</a>
 ++++
+[#3_7_C1]
 [#2_7_C1]
 ----
 ASSOCIATION A =
@@ -18,8 +19,9 @@ Beziehungen können primär wie Klassen erweitert werden. Damit die Bedeutung de
 
 Beispiel, wie die Beziehung A zu A1 spezialisiert wird, wo nur noch Bezüge zu K1 (einer Subklasse von K) einerseits und zu K, L1, L2 (Subklassen von L) andererseits zulässig sind:
 ++++
-<a href="#2_7_C2">&#x203B</a>
+<a href="#3_7_C2">&#x203B</a>
 ++++
+[#3_7_C2]
 [#2_7_C2]
 ----
 ASSOCIATION A1 EXTENDS A =
@@ -30,8 +32,9 @@ END A1;
 
 Ein Objekt der Klasse K1 kann damit entweder über eine Beziehung A mit Objekten der Klassen K oder L (zulässig, da K1 eine Subklasse von K ist) oder über eine Beziehung A1 mit Objekten der Klassen K, L1 oder L2 verbunden sein. Möchte man zusätzlich erreichen, dass ein Objekt K1 in der Rolle K nur die spezialisierte Beziehung A1 (und nicht auch die allgemeine Beziehung A) eingehen kann, ist die Rolle K als verdeckend (`HIDING`) zu kennzeichnen.
 ++++
-<a href="#2_7_C3">&#x203B</a>
+<a href="#3_7_C3">&#x203B</a>
 ++++
+[#3_7_C3]
 [#2_7_C3]
 ----
 ASSOCIATION A1 EXTENDS A =
@@ -43,8 +46,9 @@ END A1;
 Dies ist allerdings nur zulässig, wenn für K1 keine anderen aus A erweiterten Beziehungen definiert sind, bei denen die Rolle K nicht als verdeckend gekennzeichnet ist.
 
 ++++
-<a href="#2_7_C4">&#x203B</a>
+<a href="#3_7_C4">&#x203B</a>
 ++++
+[#3_7_C4]
 [#2_7_C4]
 .Syntaxregeln:
 ----

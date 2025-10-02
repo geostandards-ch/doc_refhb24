@@ -14,8 +14,9 @@ Der Wert eines gewöhnlichen Parameters einer Grafiksignatur wird als Konstante 
 Da die Darstellung häufig von Attributen abhängt, die mittels Aufzählungen definiert sind, wird dafür ein spezielles Konstrukt angeboten: Der Aufzählbereich. Ein Aufzählbereich ist entweder ein einzelner Knoten des Aufzähltyp-Baums oder ein Intervall von Knoten definiert durch zwei Knoten der gleichen Stufe. Intervalldefinitionen sind allerdings nur zulässig, wenn es sich um einen geordneten Aufzähltyp handelt. Wenn der Attributwert in einem der angegebenen Aufzählbereiche liegt, wird der entsprechende Parameter-Wert gesetzt. Die konkreten Signaturen ergeben sich aus dem Signaturenmodell. Dort werden die Signaturklassen samt den für ihre Anwendung nötigen Laufzeitparametern (Schlüsselwort `PARAMETER`) definiert. Es ist zulässig, dass numerische Datentypen nur abstrakt definiert sind.
 
 ++++
-<a href="#2_16_C1">&#x203B</a>
+<a href="#3_16_C1">&#x203B</a>
 ++++
+[#3_16_C1]
 [#2_16_C1]
 .Syntaxregeln:
 ----

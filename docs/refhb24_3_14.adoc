@@ -16,8 +16,9 @@ Als formale Parameter und Funktionsresultat kommen in Frage:
 * Wird `ENUMTREEVAL` angegeben, kommen als Argumente Attribute und Konstante in Frage, die einen Knoten oder ein Blatt einer beliebigen Aufzählung bezeichnen.
 
 ++++
-<a href="#2_14_C1">&#x203B</a>
+<a href="#3_14_C1">&#x203B</a>
 ++++
+[#3_14_C1]
 [#2_14_C1]
 .Syntaxregeln:
 ----
