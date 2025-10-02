@@ -23,15 +23,17 @@ Stefan Henrich <stefan.henrich@moflex.ch>
 :title-page:
 :chapter-label: // deprecated
 
-// Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
+// Die Verweise auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
 ifndef::env-github[]
 include::{includedir}/refhb24_0_vorwort.adoc[]
 
-include::{includedir}/refhb24_1_grundprinzipien.adoc[]
+include::{includedir}/refhb24_1_einleitung.adoc[]
 
-include::{includedir}/refhb24_2_beschreibungssprache.adoc[]
+include::{includedir}/refhb24_2_grundprinzipien.adoc[]
 
-include::{includedir}/refhb24_3_sequentieller_transfer.adoc[]
+include::{includedir}/refhb24_3_beschreibungssprache.adoc[]
+
+include::{includedir}/refhb24_4_sequentieller_transfer.adoc[]
 endif::[]
 
 // Erklärung und Link auf Website
