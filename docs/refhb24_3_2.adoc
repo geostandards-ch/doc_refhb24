@@ -11,9 +11,9 @@ Ein Name ist definiert als eine Folge von maximal 255 Buchstaben, Ziffern und Un
 
 ++++
 <a href="#3_2_C1">&#x203B</a>
+<div id="2_2_C1"></div>
 ++++
 [#3_2_C1]
-[#2_2_C1]
 .Syntaxregeln:
 ----
 Name = Letter { Letter | Digit | '_' }.
@@ -31,9 +31,9 @@ Eine Sequenz von `\u`, unmittelbar gefolgt von exakt vier Hexadezimalziffern, st
 
 ++++
 <a href="#3_2_C2">&#x203B</a>
+<div id="2_2_C2"></div>
 ++++
 [#3_2_C2]
-[#2_2_C2]
 .Syntaxregel:
 ----
 String = '"' { <any character except '\' or '"'>
@@ -48,9 +48,9 @@ Zahlen kommen in verschiedener Weise vor: Positive ganze Zahlen inklusive 0 (Pos
 
 ++++
 <a href="#3_2_C3">&#x203B</a>
+<div id="2_2_C3"></div>
 ++++
 [#3_2_C3]
-[#2_2_C3]
 .Syntaxregeln:
 ----
 PosNumber = (* Digit *).
@@ -76,9 +76,9 @@ Für verschiedene Zwecke müssen einem Beschreibungsgegenstand Eigenschaften zug
 
 ++++
 <a href="#3_2_C4">&#x203B</a>
+<div id="2_2_C4"></div>
 ++++
 [#3_2_C4]
-[#2_2_C4]
 .Syntaxregel:
 ----
 Properties = [ '(' Property { ',' Property } ')' ].
@@ -102,9 +102,9 @@ Erläuterungen werden dort verlangt, wo ein Sachverhalt näher beschrieben werde
 
 ++++
 <a href="#3_2_C5">&#x203B</a>
+<div id="2_2_C5"></div>
 ++++
 [#3_2_C5]
-[#2_2_C5]
 .Syntaxregel:
 ----
 Explanation = '//' any character except // '//'.
@@ -171,9 +171,9 @@ Ein Zeilenkommentar wird mit zwei Ausrufezeichen eröffnet, die unmittelbar aufe
 
 ++++
 <a href="#3_2_C6">&#x203B</a>
+<div id="2_2_C6"></div>
 ++++
 [#3_2_C6]
-[#2_2_C6]
 .Syntaxregel:
 ----
 !! Line comment; goes until end of line
@@ -184,9 +184,9 @@ Der Blockkommentar wird durch einen Schrägstrich und einen Stern eingeleitet; a
 
 ++++
 <a href="#3_2_C7">&#x203B</a>
+<div id="2_2_C7"></div>
 ++++
 [#3_2_C7]
-[#2_2_C7]
 .Syntaxregel:
 ----
 /* Block comment,

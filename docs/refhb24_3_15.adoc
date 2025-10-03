@@ -9,9 +9,9 @@ Sichten können auch erweitert werden (`EXTENDED` oder `EXTENDS`). Dabei ist es 
 
 ++++
 <a href="#3_15_C1">&#x203B</a>
+<div id="2_15_C1"></div>
 ++++
 [#3_15_C1]
-[#2_15_C1]
 .Syntaxregeln: 
 ----
 <1>
@@ -76,9 +76,9 @@ Mit INTERLIS wird nur eine konzeptionelle Beschreibung der Sicht gemacht. Es wir
 
 ++++
 <a href="#3_15_C2">&#x203B</a>
+<div id="2_15_C2"></div>
 ++++
 [#3_15_C2]
-[#2_15_C2]
 .Syntaxregeln:
 ----
 FormationDef = ( Projection
@@ -108,9 +108,9 @@ Alle in einer Sicht verwendeten Basissichten erhalten innerhalb der verwendenden
 
 ++++
 <a href="#3_15_C3">&#x203B</a>
+<div id="2_15_C3"></div>
 ++++
 [#3_15_C3]
-[#2_15_C3]
 .Syntaxregeln:
 ----
 RenamedViewableRef = [ Base-Name '~' ] ViewableRef.
@@ -126,9 +126,9 @@ Will man in einer Sicht bzw. einer Sichterweiterung Erweiterungen von Basisklass
 
 ++++
 <a href="#3_15_C4">&#x203B</a>
+<div id="2_15_C4"></div>
 ++++
 [#3_15_C4]
-[#2_15_C4]
 .Syntaxregel:
 ----
 BaseExtensionDef = 'BASE' Base-Name 'EXTENDED' 'BY'
@@ -139,9 +139,9 @@ Die durch das Bildungsgesetz definierte Menge der Sichtobjekte kann mittels Bedi
 
 ++++
 <a href="#3_15_C5">&#x203B</a>
+<div id="2_15_C5"></div>
 ++++
 [#3_15_C5]
-[#2_15_C5]
 .Syntaxregel:
 ----
 Selection = 'WHERE' Logical-Expression ';'.

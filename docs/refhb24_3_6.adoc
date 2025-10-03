@@ -5,9 +5,9 @@ Jedes Attribut wird durch seinen Namen und seinen Typ definiert. In runden Klamm
 
 ++++
 <a href="#3_6_C1">&#x203B</a>
+<div id="2_6_C1"></div>
 ++++
 [#3_6_C1]
-[#2_6_C1]
 .Syntaxregel:
 ----
 AttributeDef = [ [ 'CONTINUOUS' ] 'SUBDIVISION' ]
@@ -28,9 +28,9 @@ Ein Attribut kann in Erweiterungen wie folgt übersteuert werden:
 
 ++++
 <a href="#3_6_C2">&#x203B</a>
+<div id="2_6_C2"></div>
 ++++
 [#3_6_C2]
-[#2_6_C2]
 .Syntaxregeln:
 ----
 AttrTypeDef = ( 'MANDATORY' [ AttrType ]

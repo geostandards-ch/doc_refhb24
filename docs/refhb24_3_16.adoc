@@ -15,9 +15,9 @@ Da die Darstellung häufig von Attributen abhängt, die mittels Aufzählungen de
 
 ++++
 <a href="#3_16_C1">&#x203B</a>
+<div id="2_16_C1"></div>
 ++++
 [#3_16_C1]
-[#2_16_C1]
 .Syntaxregeln:
 ----
 GraphicDef = 'GRAPHIC' Graphic-Name Properties<ABSTRACT,FINAL>

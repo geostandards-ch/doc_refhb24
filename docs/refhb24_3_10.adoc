@@ -12,9 +12,9 @@ In einem übersetzten Anwendungsmodell (vgl. Kapitel 2.5.1 Modelle), kann einem 
 
 ++++
 <a href="#3_10_C1">&#x203B</a>
+<div id="2_10_C1"></div>
 ++++
 [#3_10_C1]
-[#2_10_C1]
 .Syntaxregeln:
 ----
 MetaDataBasketDef = ( 'SIGN' | 'REFSYSTEM' ) 'BASKET' Basket-Name
@@ -46,9 +46,9 @@ Nebst diesen speziellen Parametern können Parameter gleich wie Attribute defini
 
 ++++
 <a href="#3_10_C2">&#x203B</a>
+<div id="2_10_C2"></div>
 ++++
 [#3_10_C2]
-[#2_10_C2]
 .Syntaxregel:
 ----
 ParameterDef = Parameter-Name Properties<ABSTRACT,EXTENDED,FINAL>

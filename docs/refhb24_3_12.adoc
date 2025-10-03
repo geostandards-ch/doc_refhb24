@@ -67,9 +67,9 @@ Konsistenzbedingungen, die sich auf eine Vielzahl von Objekten erstrecken (insbe
 
 ++++
 <a href="#3_12_C1">&#x203B</a>
+<div id="2_12_C1"></div>
 ++++
 [#3_12_C1]
-[#2_12_C1]
 .Syntaxregeln:
 ----
 ConstraintDef = ( MandatoryConstraint
@@ -114,9 +114,9 @@ Konsistenzbedingungen für eine bestimmte Klasse oder Assoziation können auch e
 
 ++++
 <a href="#3_12_C2">&#x203B</a>
+<div id="2_12_C2"></div>
 ++++
 [#3_12_C2]
-[#2_12_C2]
 .Syntaxregel:
 ----
 ConstraintsDef = 'CONSTRAINTS' 'OF' ViewableRef '='

@@ -26,9 +26,9 @@ Mit dem Schlüsselwort `CONSTRAINTS` kann die Wertebereichsdefinition um eine od
 
 ++++
 <a href="#3_8_C1">&#x203B</a>
+<div id="2_8_C1"></div>
 ++++
 [#3_8_C1]
-[#2_8_C1]
 .Syntaxregeln:
 ----
 DomainDef = 'DOMAIN'
@@ -94,9 +94,9 @@ DOMAIN
 
 ++++
 <a href="#3_8_C2">&#x203B</a>
+<div id="2_8_C2"></div>
 ++++
 [#3_8_C2]
-[#2_8_C2]
 .Syntaxregeln:
 ----
 TextType = ( 'MTEXT' [ '*' MaxLength-PosNumber ]
@@ -146,9 +146,9 @@ DOMAIN
 
 ++++
 <a href="#3_8_C3">&#x203B</a>
+<div id="2_8_C3"></div>
 ++++
 [#3_8_C3]
-[#2_8_C3]
 .Syntaxregeln:
 ----
 EnumerationType = Enumeration [ 'ORDERED' | 'CIRCULAR' ].
@@ -217,9 +217,9 @@ DOMAIN
 
 ++++
 <a href="#3_8_C4">&#x203B</a>
+<div id="2_8_C4"></div>
 ++++
 [#3_8_C4]
-[#2_8_C4]
 .Syntaxregel:
 ----
 AlignmentType = ( 'HALIGNMENT' | 'VALIGNMENT' ).
@@ -235,9 +235,9 @@ DOMAIN
 
 ++++
 <a href="#3_8_C5">&#x203B</a>
+<div id="2_8_C5"></div>
 ++++
 [#3_8_C5]
-[#2_8_C5]
 .Syntaxregel:
 ----
 BooleanType = 'BOOLEAN'.
@@ -303,9 +303,9 @@ Als numerische Konstanten sind nebst den Dezimalzahlen auch die Zahlen Pi (Schl�
 
 ++++
 <a href="#3_8_C6">&#x203B</a>
+<div id="2_8_C6"></div>
 ++++
 [#3_8_C6]
-[#2_8_C6]
 .Syntaxregeln:
 ----
 NumericType = ( Min-Dec '..' Max-Dec | 'NUMERIC' ) [ 'CIRCULAR' ]
@@ -325,9 +325,9 @@ Formatierte Wertebereiche basieren auf Strukturen und verwenden deren numerische
 
 ++++
 <a href="#3_8_C7">&#x203B</a>
+<div id="2_8_C7"></div>
 ++++
 [#3_8_C7]
-[#2_8_C7]
 .Syntaxregeln:
 ----
 FormattedType = ( 'FORMAT' ( 'BASED' 'ON' StructureRef FormatDef
@@ -358,9 +358,9 @@ Wo Datums- oder Zeitangaben nicht nur aus einem einzigen Wert (z.B. Jahr, Sekund
 
 ++++
 <a href="#3_8_C8">&#x203B</a>
+<div id="2_8_C8"></div>
 ++++
 [#3_8_C8]
-[#2_8_C8]
 .Syntaxregel:
 ----
 DateTimeType = ( 'DATE' | 'TIMEOFDAY' | 'DATETIME' ).
@@ -453,9 +453,9 @@ Geografische Koordinaten sind typischerweise in Grad dargestellt und beziehen si
 
 ++++
 <a href="#3_8_C9">&#x203B</a>
+<div id="2_8_C9"></div>
 ++++
 [#3_8_C9]
-[#2_8_C9]
 .Syntaxregeln:
 ----
 CoordinateType = ( 'COORD' | 'MULTICOORD' ) NumericType
@@ -490,9 +490,9 @@ Mit einer Kontextdefinition können für einen generischen Koordinaten-Wertebere
 
 ++++
 <a href="#3_8_C10">&#x203B</a>
+<div id="2_8_C10"></div>
 ++++
 [#3_8_C10]
-[#2_8_C10]
 .Syntaxregel:
 ----
 ContextDef = 'CONTEXT' { Context-Name '=' { GenericCoordDef-DomainRef '='
@@ -521,9 +521,9 @@ Identifizierbare Objekte werden immer mit einer Objektidentifikation versehen. D
 
 ++++
 <a href="#3_8_C11">&#x203B</a>
+<div id="2_8_C11"></div>
 ++++
 [#3_8_C11]
-[#2_8_C11]
 .Syntaxregel:
 ----
 OIDType = 'OID' ( 'ANY' | NumericType | TextType ).
@@ -551,9 +551,9 @@ Durch Einsatz dieses Datentyps können Attribute modelliert werden, deren Inhalt
 
 ++++
 <a href="#3_8_C12">&#x203B</a>
+<div id="2_8_C12"></div>
 ++++
 [#3_8_C12]
-[#2_8_C12]
 .Syntaxregel:
 ----
 BlackboxType = 'BLACKBOX' ( 'XML' | 'BINARY' ).
@@ -564,9 +564,9 @@ Es kann Sinn machen, dass Datenobjekte Verweise auf bestimmte Klassen und Attrib
 
 ++++
 <a href="#3_8_C13">&#x203B</a>
+<div id="2_8_C13"></div>
 ++++
 [#3_8_C13]
-[#2_8_C13]
 .Syntaxregeln:
 ----
 ClassType = ( 'CLASS'
@@ -688,9 +688,9 @@ Ist der Koordinatentyp der Stützpunkte abstrakt, muss der Linienzug seinerseits
 
 ++++
 <a href="#3_8_C14">&#x203B</a>
+<div id="2_8_C14"></div>
 ++++
 [#3_8_C14]
-[#2_8_C14]
 .Syntaxregeln:
 ----
 LineType = ( [ 'DIRECTED' ] 'POLYLINE' | 'SURFACE' | 'AREA' |
@@ -720,9 +720,9 @@ Nebst Geradenstücken und Kreisbogen sind weitere Kurvenstück-Formen definierba
 
 ++++
 <a href="#3_8_C15">&#x203B</a>
+<div id="2_8_C15"></div>
 ++++
 [#3_8_C15]
-[#2_8_C15]
 .Syntaxregeln
 ----
 LineFormTypeDef = 'LINE' 'FORM'

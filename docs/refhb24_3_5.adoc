@@ -19,9 +19,9 @@ Anschliessend wird mittels Angabe des entsprechenden URI (vgl. Kapitel 2.8.1 Zei
 
 ++++
 <a href="#3_5_C1">&#x203B</a>
+<div id="2_5_C1"></div>
 ++++
 [#3_5_C1]
-[#2_5_C1]
 .Syntaxregel:
 ----
 ModelDef = [ 'CONTRACTED' ] [ 'TYPE' | 'REFSYSTEM' | 'SYMBOLOGY' ]
@@ -65,9 +65,9 @@ Ein Thema (Schlüsselwort `TOPIC`) enthält alle zur Beschreibung eines bestimmt
 
 ++++
 <a href="#3_5_C2">&#x203B</a>
+<div id="2_5_C2"></div>
 ++++
 [#3_5_C2]
-[#2_5_C2]
 .Syntaxregeln:
 ----
 TopicDef = [ 'VIEW' ] 'TOPIC' Topic-Name
@@ -132,9 +132,9 @@ Erweitert ein Thema ein anderes, werden alle Klassen des geerbten Themas überno
 
 ++++
 <a href="#3_5_C3">&#x203B</a>
+<div id="2_5_C3"></div>
 ++++
 [#3_5_C3]
-[#2_5_C3]
 .Syntaxregeln:
 ----
 ClassDef = 'CLASS' Class-Name
