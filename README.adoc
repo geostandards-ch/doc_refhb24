@@ -1,7 +1,7 @@
 ifndef::env-github[:toc: left]
 :toc-title: Inhalt
 :toclevels: 5
-:figure-caption: Figur
+:figure-caption: Abbildung
 :example-caption!:
 :table-caption: Tabelle
 :note-caption: Hinweis
