@@ -151,9 +151,9 @@ Was die Attribute (und damit die Empfängersicht) und die Konsistenzbedingungen 
 
 ++++
 <a href="#3_15_C6">&#x203B</a>
+<div id="2_15_C6"></div>
 ++++
 [#3_15_C6]
-[#2_15_C6]
 .Syntaxregel:
 ----
 ViewAttributes = [ 'ATTRIBUTE' ]
