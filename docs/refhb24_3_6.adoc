@@ -13,7 +13,7 @@ Jedes Attribut wird durch seinen Namen und seinen Typ definiert. In runden Klamm
 AttributeDef = [ [ 'CONTINUOUS' ] 'SUBDIVISION' ]
                Attribute-Name Properties<ABSTRACT,EXTENDED,FINAL,TRANSIENT>
                  ':' AttrTypeDef
-                     [ ':=' Factor { ',' Factor } ] ';'.
+                     [ ':=' Expression { ',' Expression } ] ';'.
 ----
 
 Wird der Attributwert mittels eines Faktors (vgl. Kapitel 2.13 Ausdrücke) festgelegt, muss dessen Ergebnistyp zuweisungskompatibel zum definierten Attribut sein, d.h. es muss den gleichen Wertebereich oder einen erweiterten, d.h. spezialisierten Wertebereich aufweisen. Im Rahmen von Sichten - vor allem bei Vereinigungen und Sichterweiterungen (vgl. Kapitel 2.15 Sichten) – können mehrere Faktoren festgelegt werden und in zusätzlichen Sichterweiterungen noch zusätzliche beigefügt werden. Es gilt jeweils der letzte (Basis zuerst, Erweiterung anschliessend), dessen Wert definiert ist. Mittels eines Faktors festgelegte Attribute sollen, falls sie nur innerhalb weiterer Faktoren von Bedeutung sind, vom Datentransfer ausgeschlossen werden können, sie sollen dann als transient bezeichnet werden.
