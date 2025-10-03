@@ -1,26 +1,21 @@
 == Grundprinzipien
 
-****
-Kapitel 1 steht, bis auf die verwendeten Grafiken, noch nicht online zur Verfügung.
-****
+include::refhb24_2_1.adoc[]
 
-.Datentransfer zwischen verschiedenen Datenbanken über gemeinsames Datenmodell (Datenschema) beschrieben mit gemeinsamer Datenbeschreibungssprache.
-image::{includedir}/img/refhb24_fig1.png[]
+include::refhb24_2_2.adoc[]
 
-.Spezialisierung der Modellierung eines Konzepts von Stufe Bund über kantonale (länderspezifische) bis lokale Stufe.
-image::{includedir}/img/refhb24_fig2.png[]
+include::refhb24_2_3.adoc[]
 
-.Vererbungs-Hierarchie von Adresse, Person und Gebäude.
-image::{includedir}/img/refhb24_fig3.png[]
+include::refhb24_2_4.adoc[]
 
-.Nachführung in der Primär-Datenbank und anschliessende Nachlieferung an Sekundär-Datenbanken (ein doppelter Pfeil bedeutet inkrementelle Nachlieferung).
-image::{includedir}/img/refhb24_fig4.png[]
+include::refhb24_2_5.adoc[]
 
-.Grafikdefinitionen, die einerseits auf Daten und Sichten und andererseits auf Signaturen aufbauen, um da-raus eine Grafik zu erzeugen (abstrahierte Darstellung).
-image::{includedir}/img/refhb24_fig5.png[]
+include::refhb24_2_6.adoc[]
 
-.Die verschiedenen Einsatzgebiete von INTERLIS (ein doppelter Pfeil bedeutet inkrementelle Nachlieferung).
-image::{includedir}/img/refhb24_fig6.png[]
+include::refhb24_2_7.adoc[]
 
-.Das kleine Beispiel Roads.
-image::{includedir}/img/refhb24_fig7.png[]
+include::refhb24_2_8.adoc[]
+
+include::refhb24_2_9.adoc[]
+
+include::refhb24_2_10.adoc[]
