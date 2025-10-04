@@ -1,5 +1,3 @@
 == Sequentieller Transfer
 
-****
-Kapitel 3 steht noch nicht online zur Verfügung.
-****
+include::refhb24_4_1.adoc[]
