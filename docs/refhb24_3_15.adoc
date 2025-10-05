@@ -14,6 +14,8 @@ Sichten können auch erweitert werden (`EXTENDED` oder `EXTENDS`). Dabei ist es 
 [#3_15_C1]
 .Syntaxregeln: 
 ----
+<1>
+
 ViewDef = 'VIEW' View-Name
             Properties<ABSTRACT,EXTENDED,FINAL,TRANSIENT>
             [ FormationDef | 'EXTENDS' ViewRef ]
@@ -26,6 +28,12 @@ ViewDef = 'VIEW' View-Name
 
 ViewRef = [ Model-Name '.' [ Topic-Name '.' ] ] View-Name.
 ----
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) ist an dieser Stelle die Regel ViewAttributes abgebildet. Diese befindet sich jedoch bereits weiter <<3_15_C6,hinten>> im Dokument und wird deshalb nicht erneut aufgeführt. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/13[dieses] Issue.
+
+[#ambiguous1-rev2]
+In den einfachen Fällen, wo sich ein Attribut aus der Basis ergibt, genügt es den Attributnamen und nötigen Ausdruck (mit Verwendung von Basisattributen) anzugeben.
+
+NOTE: Obiger Satz erscheint in leicht abgeänderter Form doppelt im Referenzhandbuch (Version 2.1.0). Die andere Stelle befindet sich <<ambiguous1-rev1,hier>>.
 
 Mit dem Bildungsgesetz (FormationDef) einer Sicht wird definiert, wie und aus welchen Grundlagen die virtuellen Objekte der Sicht gebildet werden.
 
@@ -153,10 +161,13 @@ ViewAttributes = [ 'ATTRIBUTE' ]
                      | AttributeDef
                      | Attribute-Name
                          Properties <ABSTRACT,EXTENDED,FINAL,TRANSIENT>
-                           ':=' Factor ';' }.
+                           ':=' Expression ';' }.
 ----
 
+[#ambiguous1-rev1]
 In den einfachen Fällen, wo ein Attribut einer Basissicht übernommen wird, genügt es den Attributnamen und die Zuordnung des Basisattributes anzugeben. Solche Definitionen sind immer final, können also nicht mehr erweitert werden.
+
+NOTE: Obiger Satz erscheint in leicht abgeänderter Form doppelt im Referenzhandbuch (Version 2.1.0). Die andere Stelle befindet sich <<ambiguous1-rev2,hier>>.
 
 Bei Vereinigungen muss für jedes Attribut vollständig angegeben werden, aus welchen Attributen der Basis-Klassen es abgeleitet wird. Ein Attribut muss sich aber nicht auf alle Basis-Klassen beziehen, sofern der Attributtyp undefinierte Werte zulässt. Für die fehlenden Basis-Objekte gilt es als undefiniert.
 
