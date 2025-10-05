@@ -53,7 +53,7 @@ Eine INTERLIS-Transferdatei ist gemäss folgender EBNF-Hauptregel aufgebaut:
 *Transfer* =
   <?xml version="1.0" encoding="UTF-8"?>
   <%ili%:transfer
-    {*NameSpaceDef*}
+    { *NameSpaceDef* }
     xmlns:%ili%="http://www.interlis.ch/xtf/2.4/INTERLIS"
     [ xmlns:%geom%="http://www.interlis.ch/geometry/1.0" ]
     [ xmlns:%xsi%="http://www.w3.org/2001/XMLSchema-instance" ] >
@@ -265,7 +265,7 @@ In `ref` wird dabei die Transferidentifikation des referenzierten Objekts einget
 
 In geordneten Beziehungen definiert das Attribut `order_pos` (Wert > 0!) die innerhalb des Transferbehälters absolute Position in der geordneten Liste der Beziehungsobjekte.
 
-==== Codieurng von Grafikdefinitionen
+==== Codierung von Grafikdefinitionen
 Für jede Grafikdefinition werden im Transfer die von der Grafikdefinition referenzierten Signaturklassen (Sign-ClassRef) übertragen. Die Objektinstanzen der Signaturklassen werden durch das Ausführen der Grafikdefinitionen auf einem konkreten Inputdatensatz erzeugt. Parameter werden dabei wie Attribute codiert.
 
 ==== Codierung von Attributen

@@ -236,8 +236,7 @@ COORD2 bzw. COORD3 werden wie folgt übersetzt:
   <xsd:element ref="geom:coord" minOccurs="1" maxOccurs="1"/> <1>
 </xsd:sequcence>
 ----
-<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. +
-Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
 
 ===== Multi-Koordinaten
 MULTICOORD2 bzw. MULTICOORD3 werden wie folgt übersetzt:
@@ -252,8 +251,7 @@ MULTICOORD2 bzw. MULTICOORD3 werden wie folgt übersetzt:
   <xsd:element ref="geom:multicoord" minOccurs="1" maxOccurs="1"/> <1>
 </xsd:sequcence>
 ----
-<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. +
-Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
 
 ===== Polylinien
 Der Typ POLYLINE wird wie folgt übersetzt:
@@ -268,8 +266,7 @@ Der Typ POLYLINE wird wie folgt übersetzt:
   <xsd:element ref="geom:polyline" minOccurs="1" maxOccurs="1"/> <1>
 </xsd:sequcence>
 ----
-<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. +
-Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
 
 ===== Multi-Polylinien
 Der Typ MULTIPOLYLINE wird wie folgt übersetzt:
@@ -284,8 +281,7 @@ Der Typ MULTIPOLYLINE wird wie folgt übersetzt:
   <xsd:element ref="geom:multipolyline" minOccurs="1" maxOccurs="1"/> <1>
 </xsd:sequcence>
 ----
-<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. +
-Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
 
 ===== Flächen
 Der Typ SURFACE wird wie folgt übersetzt:
@@ -300,8 +296,7 @@ Der Typ SURFACE wird wie folgt übersetzt:
   <xsd:element ref="geom:surface" minOccurs="1" maxOccurs="1"/> <1>
 </xsd:sequcence>
 ----
-<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. +
-Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
 
 ===== Multi-Flächen
 Der Typ MULTISURFACE wird wie folgt übersetzt:
@@ -316,8 +311,7 @@ Der Typ MULTISURFACE wird wie folgt übersetzt:
   <xsd:element ref="geom:multisurface" minOccurs="1" maxOccurs="1"/> <1>
 </xsd:sequcence>
 ----
-<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. +
-Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) fehlt der abschliessende Schrägstrich. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/15[dieses] Issue. Zudem ist die Beschränkung `minOccurs="1" maxOccurs="1"` überflüssig, da dies die Default-Werte sind (siehe https://www.w3.org/TR/xmlschema-0/#OccurrenceConstraints[XML-Spezifikation]).
 
 ===== Rollen
 Rollen werden wie folgt übersetzt:
