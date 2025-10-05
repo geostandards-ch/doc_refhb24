@@ -2,9 +2,10 @@
 Ausdrücke (Expression) werden z.B. als Argument von Funktionen oder in Konsistenz- und Selektionsbedingungen verwendet. Bei einem logischen Ausdruck (Logical-Expression) muss der Ergebnistyp Boolean sein. Ausdrücke beziehen sich auf ein Kontextobjekt, d.h. das Objekt, für das man die Bedingung formuliert. Ausgehend von diesem kann ein Attribut, ein Strukturelement, eine Funktion, etc. angesprochen werden. Solche Gegenstände sowie Vergleichsgrössen wie Konstanten und Laufzeitparameter fliessen als Faktoren in Prädikate ein. Prädikate können mittels Operatoren zu einem Ausdruck verknüpft werden.
 
 ++++
-<a href="#2_13_C1">&#x203B</a>
+<a href="#3_13_C1">&#x203B</a>
+<div id="2_13_C1"></div>
 ++++
-[#2_13_C1]
+[#3_13_C1]
 .Syntaxregeln:
 ----
 Expression = Term.
@@ -48,6 +49,8 @@ Bemerkungen zur Bedeutung der Syntaxregeln:
 
 * Ein Ausdruck wird von links nach rechts nur soweit ausgewertet bis dessen Resultatwert klar ist. Mit `OR` verbundene Folgeterme werden also nur ausgewertet, wenn der bisherige Wert falsch ist. Mit `AND` verbundene Folgeterme werden dementsprechend nur ausgewertet, wenn der bisherige Wert wahr ist.
 
+* Numerische Ausdrücke (inkl. Koordinaten) sollen immer mit voller numerischer Genauigkeit (gemäss Norm IEEE-754) berechnet werden. Erst die resultierenden Werte sollen allenfalls gerundet werden (vgl. <<_umgang_mit_rundung_von_numerischen_werten_und_koordinaten>>).
+
 Die Implikation (`={gt}`) ist nur dann false, wenn der erste Term true und der zweite Term false ist. `a ={gt} b` ist identisch mit folgender Formulierung: `NOT(a) OR b`. Das wird typischerweise verwendet, um bedingte Einschränkungen zu formulieren. Zum Beispiel: Die Geometrie ist nur bei einem bestimmten Status obligatorisch.
 
 .Beispiel:
@@ -63,6 +66,11 @@ END A;
 
 Faktoren können gemäss den folgenden Syntaxregeln gebildet werden:
 
+++++
+<a href="#3_13_C2">&#x203B</a>
+++++
+[#3_13_C2]
+.Syntaxregeln:
 ----
 Factor = ( ObjectOrAttributePath
          | ( Inspection | 'INSPECTION' Inspection-ViewableRef )

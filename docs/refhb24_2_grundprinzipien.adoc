@@ -1,4 +1,4 @@
-== Beschreibungssprache
+== Grundprinzipien
 
 include::refhb24_2_1.adoc[]
 
@@ -19,15 +19,3 @@ include::refhb24_2_8.adoc[]
 include::refhb24_2_9.adoc[]
 
 include::refhb24_2_10.adoc[]
-
-include::refhb24_2_11.adoc[]
-
-include::refhb24_2_12.adoc[]
-
-include::refhb24_2_13.adoc[]
-
-include::refhb24_2_14.adoc[]
-
-include::refhb24_2_15.adoc[]
-
-include::refhb24_2_16.adoc[]
