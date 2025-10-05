@@ -66,6 +66,11 @@ END A;
 
 Faktoren können gemäss den folgenden Syntaxregeln gebildet werden:
 
+++++
+<a href="#3_13_C2">&#x203B</a>
+++++
+[#3_13_C2]
+.Syntaxregeln:
 ----
 Factor = ( ObjectOrAttributePath
          | ( Inspection | 'INSPECTION' Inspection-ViewableRef )
