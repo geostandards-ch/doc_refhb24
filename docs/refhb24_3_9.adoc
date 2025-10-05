@@ -80,7 +80,7 @@ UNIT
 ----
 ====
 
-.Syntaxregeln
+.Syntaxtegeln
 ----
 UnitDef = 'UNIT'
             { Unit-Name

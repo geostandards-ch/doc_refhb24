@@ -5,7 +5,6 @@ ifndef::env-github[:toc: left]
 :example-caption!:
 :table-caption: Tabelle
 :note-caption: Hinweis
-:icons: font
 // zum Generieren eines PDF aus VS Code (HTML muss mit eingebetteten Bildern generiert werden, damit daraus ein korrektes PDF erstellt werden kann)
 :data-uri:
 :source-highlighter: highlight.js

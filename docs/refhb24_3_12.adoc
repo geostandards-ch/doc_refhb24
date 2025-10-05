@@ -1,9 +1,7 @@
 === Konsistenzbedingungen
 Konsistenzbedingungen dienen der Definition von Einschränkungen, welchen die Objekte genügen müssen.
 
-Konsistenzbedingungen können einen Namen haben, der innerhalb der Klasse bzw. des Wertebereichs, zu dem sie definiert werden, eindeutig sein muss.
-
-Bei der Prüfung von Konsistenzbedingungen (insbesondere der Einhaltung der Schnittfreiheit inkl. Overlaps) sollen (auch wenn die Daten in einem System mit höherer Genauigkeit gespeichert sind) gemäss Wertebereichdefinition gerundete Attribut-Werte verwendet werden (vgl. <<_umgang_mit_rundung_von_numerischen_werten_und_koordinaten>>).
+Konsistenzbedingungen können einen Namen haben, der innerhalb der Klasse bzw. des Wertebereichs zu dem sie definiert werden, eindeutig sein muss.
 
 Konsistenzbedingungen, die sich auf ein einzelnes Objekt beziehen, werden durch einen logischen Ausdruck beschrieben, der sich auf die Attribute des Objektes bezieht (s. nächstes Kapitel). Solche Bedingungen dürfen keine Funktion verwenden, die auf einem Argument (typischerweise auf dem ersten) eine Menge von Objekten (`OBJECTS OF`) erwartet. Dabei können Konsistenzbedingungen definiert werden, die obligatorisch sind und somit für alle Objekte zwingend gelten (Schlüsselwort `MANDATORY`), und solche, die nur in der Regel gelten. Im letzteren Fall wird angegeben, welcher Prozentanteil der Instanzen der Klasse die Bedingung normalerweise erfüllen soll (Regel PlausibilityConstraint).
 
