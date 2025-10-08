@@ -1,6 +1,0 @@
-=== Das kleine Beispiel Roads als Einstieg
-Im Anhang E _Das kleine Beispiel Roads_ ist ein kleines Beispiel beigefügt, das die wichtigsten INTERLIS-Sprachelemente im Rahmen einer einfachen Anwendung vorstellt.
-
-.Das kleine Beispiel Roads.
-image::{includedir}/img/refhb24_fig7.png[]
-
