@@ -139,7 +139,7 @@ Erweitert ein Thema ein anderes, werden alle Klassen des geerbten Themas überno
 ----
 ClassDef = 'CLASS' Class-Name
              Properties<ABSTRACT,EXTENDED,FINAL>
-               [ 'EXTENDS' ClassOrStructureRef ] '='
+               [ 'EXTENDS' ClassRef ] '='         <1>
              [ ( 'OID' 'AS' OID-DomainRef | 'NO' 'OID' ) ';' ]
              ClassOrStructureDef
            'END' Class-Name ';'.
@@ -160,6 +160,7 @@ StructureRef = [ Model-Name '.' [ Topic-Name '.' ] ] Structure-Name.
 
 ClassOrStructureRef = ( ClassRef | StructureRef ).
 ----
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) steht an dieser Stelle ClassOrStructureRef. In INTERLIS 2.4 dürfen aber Strukturen nicht mehr zu Klassen erweitert werden. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/16[dieses] Issue.
 
 Welche Namen qualifiziert werden müssen (durch Model-Name bzw. durch Model-Name.Topic-Name) ist am Schluss des folgenden Abschnitts (vgl. Kapitel 2.5.4 Namensräume) erklärt. Klassen und Strukturen, die nicht auf einer bereits definierten Klasse oder Struktur aufbauen, brauchen keinen EXTENDS-Teil.
 
