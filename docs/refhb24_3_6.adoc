@@ -56,10 +56,9 @@ RestrictedStructureRef = ( StructureRef | 'ANYSTRUCTURE' )
                              [ 'RESTRICTION' '(' StructureRef
                                  { ';' StructureRef } ')' ].
 
-RestrictedClassOrStructureRef = ( ClassOrStructureRef | 'ANYSTRUCTURE' )
-                                    [ 'RESTRICTION' '(' ClassOrStructureRef
-                                      { ';' ClassOrStructureRef } ')' ].
+<1>
 ----
+<1> Im PDF-Dokument des Referenzhandbuchs (Version 2.1.0) ist an dieser Stelle die Regel RestrictedClassOrStructureRef abgebildet. Diese wird in INTERLIS 2.4 nicht mehr verwendet und deshalb aus der Online-Version entfernt. Siehe dazu auch https://github.com/geostandards-ch/doc_refhb24/issues/12[dieses] Issue.
 
 Im Rahmen von Erweiterungen ist es zulässig, nur `MANDATORY` anzugeben. Es gilt dann der bereits definierte Attributtyp. Es wird aber verlangt, dass der Wert immer definiert ist.
 
