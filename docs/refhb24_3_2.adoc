@@ -7,7 +7,7 @@ Die eigentliche Sprache verwendet nur die druckbaren US-ASCII-Zeichen (32 bis 12
 Im Rahmen von Kommentaren dürfen auch weitere Zeichen (z.B. Umlaute und Akzente) vorkommen.
 
 ==== Namen
-Ein Name ist definiert als eine Folge von maximal 255 Buchstaben, Ziffern und Unterstrichen, wobei das erste Zeichen ein Buchstabe sein muss. Gross- und Kleinbuchstaben werden dabei unterschieden. Namen, die mit reservierten Wörtern der Sprache (vgl. Kapitel 2.2.7 Sonderzeichen und reservierte Wörter) zusammenfallen, sind unzulässig.
+Ein Name ist definiert als eine Folge von maximal 255 Buchstaben, Ziffern und Unterstrichen, wobei das erste Zeichen ein Buchstabe sein muss. Gross- und Kleinbuchstaben werden dabei unterschieden. Namen, die mit reservierten Wörtern der Sprache (vgl. <<_sonderzeichen_und_reservierte_wörter>>) zusammenfallen, sind unzulässig.
 
 ++++
 <a href="#3_2_C1">&#x203B</a>
@@ -22,7 +22,7 @@ Digit = ( '0' | '1' | .. | '9' ).
 HexDigit = ( Digit | 'A' | .. | 'F' | 'a' | .. | 'f' ).
 ----
 
-Näheres zur Eindeutigkeit und zum Gültigkeitsbereich von Namen ist im Kapitel 2.5.4 Namensräume beschrieben.
+Näheres zur Eindeutigkeit und zum Gültigkeitsbereich von Namen ist im <<_namensräume>> beschrieben.
 
 ==== Zeichenketten
 Zeichenketten (Strings) kommen im Zusammenhang mit Konstanten vor. Sie beginnen und enden mit einem Anführungszeichen und dürfen sich nicht über mehrere Zeilen erstrecken. `\"` steht für ein Anführungszeichen und `\\` für einen «Backslash» innerhalb des Strings.
@@ -90,7 +90,7 @@ Um zu definieren, dass an einer bestimmten Stelle einer Syntaxregel solche Eigen
 'Properties' '<' Property-Keyword { ',' Property-Keyword } '>'
 ----
 
-Man schreibt also "Properties" und definiert in spitzen Klammern die zulässigen Schlüsselwörter. Nimmt man als Beispiel die Regel ClassDef (vgl. Kapitel 2.5.3 Klassen und Strukturen) werden mit `"Properties<ABSTRACT,EXTENDED,FINAL>"` die Schlüsselwörter `"ABSTRACT"`, `"EXTENDED"` und `"FINAL"` für die Beschreibung von Eigenschaften akzeptiert. In einer INTERLIS 2-Definition wären dann unter anderem folgende Definitionen möglich:
+Man schreibt also "Properties" und definiert in spitzen Klammern die zulässigen Schlüsselwörter. Nimmt man als Beispiel die Regel ClassDef (vgl. <<_klassen_und_strukturen>>) werden mit `"Properties<ABSTRACT,EXTENDED,FINAL>"` die Schlüsselwörter `"ABSTRACT"`, `"EXTENDED"` und `"FINAL"` für die Beschreibung von Eigenschaften akzeptiert. In einer INTERLIS 2-Definition wären dann unter anderem folgende Definitionen möglich:
 
 ----
 CLASS A (ABSTRACT) = .....

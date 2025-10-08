@@ -1,9 +1,9 @@
 === Wertebereiche und Konstanten
-Mit der Vorstellung eines Wertebereichs sind verschiedene Aspekte verbunden. Primär muss ein Datentyp festgelegt werden. Die INTERLIS-Datentypen sind unabhängig von der Implementation. Es wird deshalb z.B. nicht von Integer oder Real, sondern einfach von numerischen Datentypen gesprochen (vgl. Kapitel 2.8.5 Numerische Datentypen).
+Mit der Vorstellung eines Wertebereichs sind verschiedene Aspekte verbunden. Primär muss ein Datentyp festgelegt werden. Die INTERLIS-Datentypen sind unabhängig von der Implementation. Es wird deshalb z.B. nicht von Integer oder Real, sondern einfach von numerischen Datentypen gesprochen (vgl. <<_numerische_datentypen>>).
 
 Werden numerische Attribute (inkl. Koordinaten, Linien), die nicht TRANSIENT (vgl. unten) sind, insbesondere im Rahmen von Ausdrücken verwendet, sind die Werte (unabhängig von der Speicherung im jeweiligen System) immer gemäss Wertebereichsdefinition zu runden. Damit das Rundungsverfahren nicht vorgeschrieben werden muss (z.B. kaufmännisch [0.5 immer aufrunden]), gelten Werte von funktional berechneten Attributen, die nicht TRANSIENT (vgl. unten) sind, als korrekt, wenn sie auf- oder abgerundet sind.
 
-Ist der Datentyp festgelegt, sind – je nach Datentyp – noch weitere Präzisierungen nötig oder möglich. Ist eine Wertebereich-Definition noch unvollständig (fehlt z.B. bei einem numerischen Wertebereich noch die konkrete Bereichsdefinition), muss sie als abstrakt deklariert werden (Schlüsselwort `ABSTRACT`, Regel Properties). Um insbesondere den Übergang von LV03- auf LV95-Koordinaten zu erleichtern, kann der Wertebereich von Koordinaten als generisch (Schlüsselwort `GENERIC`, Regel Properties) definiert werden. Die verwendenden Wertebereiche (insbesondere Linien), Attribute, Klassen und Themen müssen deswegen nicht abstrakt definiert werden, obwohl der Koordinaten-Wertebereich erst in spezifischen Modellen oder sogar erst in den Transferdaten festgelegt wird (vgl. Kapitel 2.8.8 Koordinaten).
+Ist der Datentyp festgelegt, sind – je nach Datentyp – noch weitere Präzisierungen nötig oder möglich. Ist eine Wertebereich-Definition noch unvollständig (fehlt z.B. bei einem numerischen Wertebereich noch die konkrete Bereichsdefinition), muss sie als abstrakt deklariert werden (Schlüsselwort `ABSTRACT`, Regel Properties). Um insbesondere den Übergang von LV03- auf LV95-Koordinaten zu erleichtern, kann der Wertebereich von Koordinaten als generisch (Schlüsselwort `GENERIC`, Regel Properties) definiert werden. Die verwendenden Wertebereiche (insbesondere Linien), Attribute, Klassen und Themen müssen deswegen nicht abstrakt definiert werden, obwohl der Koordinaten-Wertebereich erst in spezifischen Modellen oder sogar erst in den Transferdaten festgelegt wird (vgl. <<_koordinaten>>).
 
 Wertebereiche können – wie andere Konstrukte – auch geerbt und dann erweitert werden, sofern sie nicht als `FINAL` definiert wurden. Wichtig ist dabei der Grundsatz, dass eine erweiterte Definition immer mit der Basis-Definition kompatibel sein muss. Bei Wertebereichen sind Erweiterungen (Schlüsselwort `EXTENDS`) somit eigentlich Präzisierungen bzw. Einschränkungen. Das Schlüsselwort `EXTENDED` (Regel Property) ist nicht zulässig. Im Interesse der Lesbarkeit wird empfohlen, Definitionsteile von Basis-Wertebereichen (z.B. die Masseinheit) in der Erweiterung auch dann zu wiederholen, wenn sie unverändert sind.
 
@@ -57,7 +57,7 @@ BaseType = ( TextType
            | AttributePathType ).
 ----
 
-In Vergleichsoperationen (vgl. Kapitel 2.13 Ausdrücke) können Attributwerte auch mit Konstanten verglichen werden. Diese sind wie folgt definiert:
+In Vergleichsoperationen (vgl. <<_ausdrücke>>) können Attributwerte auch mit Konstanten verglichen werden. Diese sind wie folgt definiert:
 
 ----
 Constant = ( 'UNDEFINED'
@@ -82,7 +82,7 @@ Die INTERLIS-Zeichenkettenlänge bezeichnet die Zahl der Zeichen, wie sie von Be
 
 Bemerkung: Im Zusammenhang mit INTERLIS ist die Länge einer Zeichenkette als Anzahl jener Zeichen definiert, welche gemäss Unicode-Standard die kanonische Kombinationsklasse Nr. 0 besitzen, nachdem die Zeichenkette in die kanonisch dekomponierte Form von Unicode gebracht wurde (siehe https://www.unicode.org/unicode/reports/tr15/). So besitzt etwa eine Zeichenkette, die aus der Kette <LATIN CAPITAL LETTER C WITH CIRCUMFLEX><COMBINING CEDILLA> besteht, ebenso die Länge 1 wie die äquivalente Zeichenkette <LATIN CAPITAL LETTER C>< COMBINING CIRCUMFLEX ACCENT><COMBINING CEDILLA>. Gemäss der obigen Definition besitzen Ligaturen für «fl» oder «ffi» die Länge 1. Es wird aber davon abgeraten, solche Darstellungsformen überhaupt für Zeichenkettenattribute zu verwenden.
 
-Der Namen-Zeichenkettentyp (Schlüsselwort `NAME`) definiert einen Wertebereich, der genau demjenigen der INTERLIS-Namen entspricht (vgl. Kapitel 2.2.2 Namen). Er wird in der vordefinierten Klasse `METAOBJECT` (siehe vordefiniertes Basismodell INTERLIS) und damit vor allem in den Klassen für Referenzsysteme sowie Signaturen eingesetzt (vgl. Kapitel 2.10.3 Referenzsysteme und Kapitel 2.16 Darstellungsbeschreibungen), weil dort Datenattribute mit Beschreibungselementen von Modellen übereinstimmen müssen.
+Der Namen-Zeichenkettentyp (Schlüsselwort `NAME`) definiert einen Wertebereich, der genau demjenigen der INTERLIS-Namen entspricht (vgl. <<_namen>>). Er wird in der vordefinierten Klasse `METAOBJECT` (siehe vordefiniertes Basismodell INTERLIS) und damit vor allem in den Klassen für Referenzsysteme sowie Signaturen eingesetzt (vgl. <<_referenzsysteme>> und <<_darstellungsbeschreibungen>>), weil dort Datenattribute mit Beschreibungselementen von Modellen übereinstimmen müssen.
 
 Als weiterer Zeichenkettentyp wird der URI (Uniform Resource Identifier) geführt, z.B. http-, ftp- oder mailto-Adressen (s. Abschnitt 1.2 im Internet-Standard IETF RFC 2396 in https://www.w3.org). Die Länge eines URI ist in INTERLIS auf 1023 Zeichen beschränkt. Er entspricht damit folgender Definition:
 
@@ -169,7 +169,7 @@ Im Rahmen von Neudefinitionen von Aufzählungen (Primärdefinition, zusätzliche
 
 Aufzählungen können einerseits erweitert werden, indem für Blätter (also Aufzählungselemente, die keine Unter-Aufzählung aufweisen) der bisherigen Aufzählung Unter-Aufzählungen definiert werden. In der erweiterten Definition werden aus bisherigen Blättern neu Knoten, für die keine Werte definiert werden dürfen.
 
-Andererseits kann jede einzelne Teilaufzählung in Erweiterungen durch weitere Elemente (Knoten oder Blätter) ergänzt werden. Die Basisaufzählungen umfassen dadurch nebst den genannten Elementen immer auch noch potenziell weitere Elemente, die erst in Erweiterungen definiert werden. Solche potenziellen Werte können auf der Basisstufe in Ausdrücken, Funktionsargumenten und Signaturzuweisungen (vgl. Kapitel 2.13 Ausdrücke, Kapitel 2.14 Funktionen und Kapitel 2.16 Darstellungsbeschreibungen) mit dem Wert `OTHERS` angesprochen werden. `OTHERS` ist jedoch kein zulässiger Wert im Rahmen der Klasse, zu der das Objekt gehört. Die Möglichkeit, in Erweiterungen zusätzliche Aufzählelemente anfügen zu können, kann unterbunden werden, indem die Teilaufzählung als abschliessend erklärt wird (`FINAL`). Dies erfolgt entweder nach dem letzten aufgeführten Element oder im Rahmen einer Erweiterung auch ohne dass neue Elemente angefügt werden.
+Andererseits kann jede einzelne Teilaufzählung in Erweiterungen durch weitere Elemente (Knoten oder Blätter) ergänzt werden. Die Basisaufzählungen umfassen dadurch nebst den genannten Elementen immer auch noch potenziell weitere Elemente, die erst in Erweiterungen definiert werden. Solche potenziellen Werte können auf der Basisstufe in Ausdrücken, Funktionsargumenten und Signaturzuweisungen (vgl. <<_ausdrücke>>, <<_funktionen>> und <<_darstellungsbeschreibungen>>) mit dem Wert `OTHERS` angesprochen werden. `OTHERS` ist jedoch kein zulässiger Wert im Rahmen der Klasse, zu der das Objekt gehört. Die Möglichkeit, in Erweiterungen zusätzliche Aufzählelemente anfügen zu können, kann unterbunden werden, indem die Teilaufzählung als abschliessend erklärt wird (`FINAL`). Dies erfolgt entweder nach dem letzten aufgeführten Element oder im Rahmen einer Erweiterung auch ohne dass neue Elemente angefügt werden.
 
 Zirkuläre Aufzählungen (Schlüsselwort CIRCULAR) können nicht erweitert werden.
 
@@ -244,7 +244,7 @@ BooleanType = 'BOOLEAN'.
 ----
 
 ==== Numerische Datentypen
-Die wichtigste Angabe bei numerischen Datentypen ist der Minimal- und der Maximal-Wert inklusive Stellenzahl (Nachkommastellen) sowie der Skalierungsfaktor. Zusätzlich kann angegeben werden, dass der Typ zirkulär ist (Schlüsselwort `CIRCULAR`), d.h. dass der in der letzten signifikanten Stelle um 1 erhöhte Maximalwert und der Minimalwert sachlich die gleiche Bedeutung haben (z.B. bei Winkeln 0 .. 359 Grad). Ist das Attribut als eine kontinuierliche Unterteilung des Vorgängerattributs definiert (vgl. Kapitel 2.6.1 Allgemeine Aussagen zu Attributen), muss der Typ als zirkulär definiert sein. Fehlt die Angabe des Minimal- und Maximal-Wertes (Schlüsselwort `NUMERIC`), gilt der Wertebereich als abstrakt.
+Die wichtigste Angabe bei numerischen Datentypen ist der Minimal- und der Maximal-Wert inklusive Stellenzahl (Nachkommastellen) sowie der Skalierungsfaktor. Zusätzlich kann angegeben werden, dass der Typ zirkulär ist (Schlüsselwort `CIRCULAR`), d.h. dass der in der letzten signifikanten Stelle um 1 erhöhte Maximalwert und der Minimalwert sachlich die gleiche Bedeutung haben (z.B. bei Winkeln 0 .. 359 Grad). Ist das Attribut als eine kontinuierliche Unterteilung des Vorgängerattributs definiert (vgl. <<_allgemeine_aussagen_zu_attributen>>), muss der Typ als zirkulär definiert sein. Fehlt die Angabe des Minimal- und Maximal-Wertes (Schlüsselwort `NUMERIC`), gilt der Wertebereich als abstrakt.
 
 ----
 DOMAIN
@@ -269,7 +269,7 @@ DOMAIN
 ----
 ====
 
-Um die Bedeutung des Wertes genauer zu erklären kann eine Masseinheit angegeben werden (vgl. Kapitel 2.9 Einheiten). Abstrakte Masseinheiten sind nur zulässig, solange der Wertebereich selbst noch undefiniert ist (Schlüsselwort `NUMERIC`).
+Um die Bedeutung des Wertes genauer zu erklären kann eine Masseinheit angegeben werden (vgl. <<_einheiten>>). Abstrakte Masseinheiten sind nur zulässig, solange der Wertebereich selbst noch undefiniert ist (Schlüsselwort `NUMERIC`).
 
 Für Erweiterungen gelten folgende Regeln:
 
@@ -295,9 +295,9 @@ DOMAIN
 ----
 ====
 
-Einem numerischen Wertebereich kann auch ein Skalarsystem zugeordnet werden (vgl. Kapitel 2.10.3 Referenzsysteme). Damit beziehen sich die Werte auf den durch das Skalarsystem bestimmten Nullpunkt. Es sind also absolute Werte in diesem Skalarsystem. Ist in der Klasse des Skalarsystems die Einheit nicht `ANYUNIT`, muss beim numerischen Datentyp eine Einheit angegeben werden, die mit jener des Referenzsystems verträglich ist. Bezieht man sich auf ein Koordinatensystem, kann die Achse angegeben werden, auf die sich die Werte beziehen. Die Einheit muss mit jener der entsprechenden Achse verträglich sein. Fehlt diese Angabe, ist der Bezug nicht genauer definiert, sondern ergibt sich aus dem Fachgebiet (z.B. bezieht man sich bei einer Höhe auf ein Ellipsoid, meint man ellipsoidische Höhen). Bezieht man sich auf einen anderen Wertebereich, soll das gleiche Referenzsystem gelten wie bei diesem Wertebereich. In diesem Fall darf die Angabe der Achse nur fehlen, wenn es sich um einen numerischen Wertebereich handelt. Bei einem Koordinatenwertebereich ist die Achsenangabe obligatorisch. Die Angabe des Referenzsystems kann in Erweiterungen nicht mehr geändert werden.
+Einem numerischen Wertebereich kann auch ein Skalarsystem zugeordnet werden (vgl. <<_referenzsysteme>>). Damit beziehen sich die Werte auf den durch das Skalarsystem bestimmten Nullpunkt. Es sind also absolute Werte in diesem Skalarsystem. Ist in der Klasse des Skalarsystems die Einheit nicht `ANYUNIT`, muss beim numerischen Datentyp eine Einheit angegeben werden, die mit jener des Referenzsystems verträglich ist. Bezieht man sich auf ein Koordinatensystem, kann die Achse angegeben werden, auf die sich die Werte beziehen. Die Einheit muss mit jener der entsprechenden Achse verträglich sein. Fehlt diese Angabe, ist der Bezug nicht genauer definiert, sondern ergibt sich aus dem Fachgebiet (z.B. bezieht man sich bei einer Höhe auf ein Ellipsoid, meint man ellipsoidische Höhen). Bezieht man sich auf einen anderen Wertebereich, soll das gleiche Referenzsystem gelten wie bei diesem Wertebereich. In diesem Fall darf die Angabe der Achse nur fehlen, wenn es sich um einen numerischen Wertebereich handelt. Bei einem Koordinatenwertebereich ist die Achsenangabe obligatorisch. Die Angabe des Referenzsystems kann in Erweiterungen nicht mehr geändert werden.
 
-Stellt der numerische Wert einen Winkel dar, kann sein Richtungssinn festgelegt werden. Im Falle von Richtungen kann angegeben werden, auf welches Koordinatensystem (definiert durch einen Koordinaten-Wertebereich) sich die Richtung bezieht. Damit ist bekannt, wie die Nullrichtung (Azimut) und der Drehsinn definiert sind (vgl. Kapitel 2.8.8 Koordinaten). Diese Angabe kann in Erweiterungen nicht mehr geändert werden.
+Stellt der numerische Wert einen Winkel dar, kann sein Richtungssinn festgelegt werden. Im Falle von Richtungen kann angegeben werden, auf welches Koordinatensystem (definiert durch einen Koordinaten-Wertebereich) sich die Richtung bezieht. Damit ist bekannt, wie die Nullrichtung (Azimut) und der Drehsinn definiert sind (vgl. <<_koordinaten>>). Diese Angabe kann in Erweiterungen nicht mehr geändert werden.
 
 Als numerische Konstanten sind nebst den Dezimalzahlen auch die Zahlen Pi (Schlüsselwort `PI`) und e – Basis des natürlichen Logarithmus – (Schlüsselwort `LNBASE`) definiert.
 
@@ -428,7 +428,7 @@ END Projekt;
 ==== Koordinaten
 Koordinaten können ein-, zwei- oder dreidimensional definiert werden und sind entsprechend eine Einzelzahl, ein Zahlenpaar oder ein Zahlentripel. Es ist zulässig, dass die zweite oder dritte Dimension erst in einer Erweiterung beigefügt wird. Für jede Dimension muss der numerische Wertebereich sowie allenfalls eine Masseinheit und ein Koordinatensystem (inkl. Achsnummern) angegeben werden. Es gelten die gleichen Regeln wie bei den numerischen Datentypen. Es können nur konkrete Masseinheiten angegeben werden. Wird kein Referenzsystem angegeben und sind die Masseinheiten entweder nicht oder als Längeneinheit definiert, darf ein Programmsystem, das das Modell implementiert, davon ausgehen, dass es sich um kartesische Koordinaten handelt.
 
-Wird eine Rotationsangabe gemacht (Schlüsselwort `ROTATION`) kann im Rahmen von Richtungsdefinitionen (vgl. Kapitel 2.8.5 Numerische Datentypen) auf ein solches Koordinaten-Referenzsystem verwiesen werden. Die Rotationsdefinition legt fest, welche Achse des Koordinaten-Wertebereichs der Nullrichtung und welche der Richtung eines positiven, rechten Winkels entsprechen. Sie darf auch in einer konkreten Koordinatendefinition fehlen und dann allenfalls in einer Erweiterung beigefügt werden.
+Wird eine Rotationsangabe gemacht (Schlüsselwort `ROTATION`) kann im Rahmen von Richtungsdefinitionen (vgl. <<_numerische_datentypen>>) auf ein solches Koordinaten-Referenzsystem verwiesen werden. Die Rotationsdefinition legt fest, welche Achse des Koordinaten-Wertebereichs der Nullrichtung und welche der Richtung eines positiven, rechten Winkels entsprechen. Sie darf auch in einer konkreten Koordinatendefinition fehlen und dann allenfalls in einer Erweiterung beigefügt werden.
 
 Die Angaben betreffend Achsbezug und Rotation können in Erweiterungen nicht geändert werden.
 
@@ -486,7 +486,7 @@ END Punkt;
 
 Das Thema (`TOPIC`), zu dem eine solche Definition gehört, muss aber als abstrakt deklariert werden, sofern keine Kontextdefinition wirkt.
 
-Mit einer Kontextdefinition können für einen generischen Koordinaten-Wertebereich (Generic-CoordDef-DomainRef) konkrete Koordinaten-Wertebereiche definiert werden. Wurde für einen generischen Koordinaten-Wertebereich nicht nur ein einzelner, sondern eine Auswahl von möglichen konkreten Koordinaten-Wertebereichen festgelegt, wird beim Transfer des einzelnen Behälters, der für diesen Behälter geltende Wertebereich festgehalten (vgl. Kapitel 3.3.6 Codierung von Themen). Die Tatsache, dass die Festlegung aufgeschoben ist, muss beim Thema angemerkt werden (vgl. Kapitel 2.5.2 Themen). Der letztlich gültige konkrete Koordinaten-Wertebereich gilt bei allen Verwendungen des generischen Koordinaten-Wertebereichs und bei allen Verwendungen von Linien-Wertebereichen, die auf dem generischen Koordinaten-Wertebereich basieren.
+Mit einer Kontextdefinition können für einen generischen Koordinaten-Wertebereich (Generic-CoordDef-DomainRef) konkrete Koordinaten-Wertebereiche definiert werden. Wurde für einen generischen Koordinaten-Wertebereich nicht nur ein einzelner, sondern eine Auswahl von möglichen konkreten Koordinaten-Wertebereichen festgelegt, wird beim Transfer des einzelnen Behälters, der für diesen Behälter geltende Wertebereich festgehalten (vgl. <<_codierung_von_themen>>). Die Tatsache, dass die Festlegung aufgeschoben ist, muss beim Thema angemerkt werden (vgl. <<_themen>>). Der letztlich gültige konkrete Koordinaten-Wertebereich gilt bei allen Verwendungen des generischen Koordinaten-Wertebereichs und bei allen Verwendungen von Linien-Wertebereichen, die auf dem generischen Koordinaten-Wertebereich basieren.
 
 ++++
 <a href="#3_8_C10">&#x203B</a>
@@ -517,7 +517,7 @@ CONTEXT default =
 ----
 
 ==== Wertebereiche von Objektidentifikationen
-Identifizierbare Objekte werden immer mit einer Objektidentifikation versehen. Damit für die Systeme klar ist, welcher Speicherplatz dafür vorgesehen werden muss und wie die Objektidentifikationen erzeugt werden müssen, können entsprechende Wertebereiche definiert und diese den Themen bzw. Klassen (vgl. Kapitel 2.5.2 Themen und Kapitel 2.5.3 Klassen und Strukturen) zugeordnet werden. Für die Verwaltung von Objektidentifikationen, insbesondere auch von Behältern, macht es aber Sinn, gewöhnliche Attribute mit solchen Wertebereichen zu führen.
+Identifizierbare Objekte werden immer mit einer Objektidentifikation versehen. Damit für die Systeme klar ist, welcher Speicherplatz dafür vorgesehen werden muss und wie die Objektidentifikationen erzeugt werden müssen, können entsprechende Wertebereiche definiert und diese den Themen bzw. Klassen (vgl. <<_themen>> und <<_klassen_und_strukturen>>) zugeordnet werden. Für die Verwaltung von Objektidentifikationen, insbesondere auch von Behältern, macht es aber Sinn, gewöhnliche Attribute mit solchen Wertebereichen zu führen.
 
 ++++
 <a href="#3_8_C11">&#x203B</a>
@@ -544,7 +544,7 @@ DOMAIN
 
 Es ist nicht möglich, eine OID-Definition zu erweitern, ausser dass ein `NOOID` durch `ANYOID`, und `ANYOID` zu einer konkreten Definition (nicht `OID ANY`) erweitert werden kann.
 
-Wird `ANYOID` für abstrakte Themen bzw. Klassen angewendet, wird verlangt, dass eine Objektidentifikation erwartet wird, die genaue Definition aber noch offen ist. Sonst kann `ANYOID` nur als Wertebereich von Attributen verwendet werden. Zum Attributwert gehört dann nicht nur die eigentliche `OID`, sondern auch der konkrete OID-Wertebereich. OID-Werte von textlichen OID-Wertebereichen müssen die XML-ID Regel in Kapitel 3.3.1 erfüllen: erstes Zeichen muss ein Buchstabe, eine Ziffer oder ein Unterstrich sein, dann folgen Buchstaben, Ziffern, Punkte, Minuszeichen, Unterstriche; keine Doppelpunkte (!).
+Wird `ANYOID` für abstrakte Themen bzw. Klassen angewendet, wird verlangt, dass eine Objektidentifikation erwartet wird, die genaue Definition aber noch offen ist. Sonst kann `ANYOID` nur als Wertebereich von Attributen verwendet werden. Zum Attributwert gehört dann nicht nur die eigentliche `OID`, sondern auch der konkrete OID-Wertebereich. OID-Werte von textlichen OID-Wertebereichen müssen die XML-ID Regel in <<_einleitung_3>> erfüllen: erstes Zeichen muss ein Buchstabe, eine Ziffer oder ein Unterstrich sein, dann folgen Buchstaben, Ziffern, Punkte, Minuszeichen, Unterstriche; keine Doppelpunkte (!).
 
 ==== Gefässe
 Durch Einsatz dieses Datentyps können Attribute modelliert werden, deren Inhalt nicht spezifiziert werden kann. Die Variante `XML` beschreibt ein Attribut mit XML-Inhalt und die Variante `BINARY` einen binären Inhalt. Dieser Typ kann in Erweiterungen nicht verfeinert werden.
@@ -589,7 +589,7 @@ AttributePathConst = '>>' [ ViewableRef '->' ] Attribute-Name.
 
 Mit der Angabe von `STRUCTURE` wird eine beliebige Struktur oder Klasse, mit `CLASS` (auch als Erweiterung von `STRUCTURE` zulässig) eine beliebige Klasse (aber keine Strukturen) zugelassen. Sollen nur bestimmte Strukturen bzw. Klassen und ihre Erweiterungen zugelassen sein, sind diese aufzuführen (`RESTRICTION`). In Erweiterungen müssen erneut alle zulässigen Strukturen bzw. Klassen aufgeführt werden. Sie dürfen aber nicht im Widerspruch zur Basisdefinition sein. Sobald solche Einschränkungen definiert sind, kann darum `STRUCTURE` nicht mehr durch `CLASS` erweitert werden.
 
-Mit der Angabe von `ATTRIBUTE` wird ein Attributpfadtyp zugelassen. Es kann verlangt werden, dass es zu einer Klasse (keine Subklasse!) gemäss einer anderen Definition gehört (`OF`). Dabei kann entweder auf ein ClassType-Attribut oder im Falle einer Definition einer Funktion (vgl. Kapitel 2.14 Funktionen) auf ein anderes Argument verwiesen werden. Die möglichen Attributtypen können zudem eingeschränkt werden (`RESTRICTION`). Als Konstante kommen die Namen von Attributen der Klassen, Strukturen, Assoziationen und Sichten in Frage. Der entsprechende Klassenname kann explizit angegeben werden oder ergibt sich aus dem Kontext bzw. aus dem Verweis auf ein anderes Attribut oder ein anderes Argument (`OF`).
+Mit der Angabe von `ATTRIBUTE` wird ein Attributpfadtyp zugelassen. Es kann verlangt werden, dass es zu einer Klasse (keine Subklasse!) gemäss einer anderen Definition gehört (`OF`). Dabei kann entweder auf ein ClassType-Attribut oder im Falle einer Definition einer Funktion (vgl. <<_funktionen>>) auf ein anderes Argument verwiesen werden. Die möglichen Attributtypen können zudem eingeschränkt werden (`RESTRICTION`). Als Konstante kommen die Namen von Attributen der Klassen, Strukturen, Assoziationen und Sichten in Frage. Der entsprechende Klassenname kann explizit angegeben werden oder ergibt sich aus dem Kontext bzw. aus dem Verweis auf ein anderes Attribut oder ein anderes Argument (`OF`).
 
 ==== Linienzüge
 ===== Geometrie des Linienzugs
@@ -628,9 +628,9 @@ image::{includedir}/img/refhb24_fig13.png[]
 image::{includedir}/img/refhb24_fig14.png[]
 
 ===== Linienzug mit Strecken und Kreisbogen als vordefinierte Kurvenstücke
-INTERLIS 2 kennt gerichtete (`DIRECTED POLYLINE`), ungerichtete (`POLYLINE`) oder eine Menge von ungerichteten (`MULTIPOLYLINE`) Linienzügen. Bei einem einzelnen Linienzug (`[DIRECTED] POLYLINE`) sind aber beim Transfer eines Ausschnittes auch `MULTIPOLYLINE` zulässig (vgl. Kapitel 3.3.6 Codierung von Themen). Bei einer Menge von Linienzügen (`MULTIPOLYLINE`) müssen die einzelnen Linienzüge nicht miteinander verbunden sein. Zudem werden Linienzüge im Rahmen von Einzelflächen und Gebietseinteilungen (vgl. Kapitel 2.8.13 Einzelflächen und Gebietseinteilungen) verwendet.
+INTERLIS 2 kennt gerichtete (`DIRECTED POLYLINE`), ungerichtete (`POLYLINE`) oder eine Menge von ungerichteten (`MULTIPOLYLINE`) Linienzügen. Bei einem einzelnen Linienzug (`[DIRECTED] POLYLINE`) sind aber beim Transfer eines Ausschnittes auch `MULTIPOLYLINE` zulässig (vgl. <<_codierung_von_themen>>). Bei einer Menge von Linienzügen (`MULTIPOLYLINE`) müssen die einzelnen Linienzüge nicht miteinander verbunden sein. Zudem werden Linienzüge im Rahmen von Einzelflächen und Gebietseinteilungen (vgl. <<_einzelflächen_und_gebietseinteilungen>>) verwendet.
 
-Zur Definition eines konkreten Linienzug-Wertebereichs gehört immer die Angabe der erlaubten Kurvenstück-Formen mittels Aufzählung, z.B. Strecken (Schlüsselwort `STRAIGHTS`), Kreisbogen (Schlüsselwort `ARCS`) oder weitere Möglichkeiten (vgl. Kapitel 2.8.12.3 Weitere Kurvenstück-Formen), und die Angabe des Wertebereichs der Stützpunkte. In einem abstrakten Linienzug-Wertebereich dürfen diese Angaben fehlen. Für Wertebereichserweiterungen gelten folgende Regeln:
+Zur Definition eines konkreten Linienzug-Wertebereichs gehört immer die Angabe der erlaubten Kurvenstück-Formen mittels Aufzählung, z.B. Strecken (Schlüsselwort `STRAIGHTS`), Kreisbogen (Schlüsselwort `ARCS`) oder weitere Möglichkeiten (vgl. <<_weitere_kurvenstück_formen>>), und die Angabe des Wertebereichs der Stützpunkte. In einem abstrakten Linienzug-Wertebereich dürfen diese Angaben fehlen. Für Wertebereichserweiterungen gelten folgende Regeln:
 
 * Die Kurvenstück-Form darf nur reduziert, nicht aber ergänzt werden.
 
@@ -680,9 +680,9 @@ Konkurrierende Linienstücke ergeben sich wie folgt:
 
 Da die Überlappungsfreiheit bei Einzelflächen und Gebietseinteilung zwingend ist, kann auf die Verwendung WITHOUT OVERLAPS verzichtet werden, wenn nur die Spurbreite zur Anwendung kommen soll.
 
-Die Toleranzangabe (explizit oder implizit) kann nicht übersteuert werden. Im Rahmen von Wertebereichsdefinitionen und Attributserweiterungen können ungerichtete Linienzüge zu gerichteten Linienzügen erweitert werden (vgl. Kapitel 2.8.13.4 Erweiterbarkeit). Sind Linienzüge gerichtet, muss ihr Richtungssinn immer (auch bei einem Datentransfer) erhalten bleiben.
+Die Toleranzangabe (explizit oder implizit) kann nicht übersteuert werden. Im Rahmen von Wertebereichsdefinitionen und Attributserweiterungen können ungerichtete Linienzüge zu gerichteten Linienzügen erweitert werden (vgl. <<_erweiterbarkeit>>). Sind Linienzüge gerichtet, muss ihr Richtungssinn immer (auch bei einem Datentransfer) erhalten bleiben.
 
-Für die Stützpunkte wird der Wertebereich der Koordinaten definiert. Für INTERLIS-Linien kommen nur kartesische Koordinatensysteme in Frage, bei denen die Wertebereiche aller Achsen dieselbe Stellenzahl aufweisen. Mittels der Existenzbedingung `REQUIRED IN` (vgl. Kapitel 2.12 Konsistenzbedingungen und Kapitel 2.13 Ausdrücke) kann zudem gefordert werden, dass die Koordinaten nicht beliebig sein dürfen, sondern denjenigen der Punkte bestimmter Klassen entsprechen müssen.
+Für die Stützpunkte wird der Wertebereich der Koordinaten definiert. Für INTERLIS-Linien kommen nur kartesische Koordinatensysteme in Frage, bei denen die Wertebereiche aller Achsen dieselbe Stellenzahl aufweisen. Mittels der Existenzbedingung `REQUIRED IN` (vgl. <<_konsistenzbedingungen>> und <<_ausdrücke>>) kann zudem gefordert werden, dass die Koordinaten nicht beliebig sein dürfen, sondern denjenigen der Punkte bestimmter Klassen entsprechen müssen.
 
 Ist der Koordinatentyp der Stützpunkte abstrakt, muss der Linienzug seinerseits als abstrakt deklariert werden.
 
@@ -729,7 +729,7 @@ LineFormTypeDef = 'LINE' 'FORM'
                     { LineFormType-Name ':' LineStructure-Name ';' }.
 ----
 
-Eine Linienstruktur muss immer eine Erweiterung der durch INTERLIS definierten Struktur LineSegment sein (vgl. Kapitel 2.8.12.2 Linienzug mit Strecken und Kreisbogen als vordefinierte Kurvenstücke).
+Eine Linienstruktur muss immer eine Erweiterung der durch INTERLIS definierten Struktur LineSegment sein (vgl. <<_linienzug_mit_strecken_und_kreisbogen_als_vordefinierte_kurvenstücke>>).
 
 ==== Einzelflächen und Gebietseinteilungen
 ===== Geometrie von Flächen

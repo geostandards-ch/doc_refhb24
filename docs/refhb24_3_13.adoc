@@ -110,9 +110,9 @@ Faktoren können sich auf Objekte und ihre Attribute beziehen. Dabei können sch
 
 * `THIS`: Bezeichnet das so genannte Kontextobjekt, d.h. das aktuelle Objekt einer Klasse, einer Sicht oder einer Grafikdefinition, in dem ein Objektpfad verlangt wird. `THIS` ist z.B. beim Aufruf einer Funktion als Argument anzugeben, die `ANYCLASS` oder `ANYSTRUCTURE` als Parameter hat.
 
-* `THISAREA` und `THATAREA`: Bezeichnen die beiden Gebietsobjekte, auf dessen gemeinsamen Rand sich das aktuelle Linienzugsobjekt befindet. Der Einsatz von `THISAREA` und `THATAREA` ist nur möglich im Rahmen der Inspektion einer Gebietseinteilung (vgl. Kapitel 2.15 Sichten).
+* `THISAREA` und `THATAREA`: Bezeichnen die beiden Gebietsobjekte, auf dessen gemeinsamen Rand sich das aktuelle Linienzugsobjekt befindet. Der Einsatz von `THISAREA` und `THATAREA` ist nur möglich im Rahmen der Inspektion einer Gebietseinteilung (vgl. <<_sichten>>).
 
-* `PARENT`: Bezeichnet das Ober-Strukturelement oder Ober-Objekt des aktuellen Strukturelementes oder Objektes. Die Sicht muss dazu eine gewöhnliche Inspektion (keine Gebietsinspektion) sein (vgl. Kapitel 2.15 Sichten).
+* `PARENT`: Bezeichnet das Ober-Strukturelement oder Ober-Objekt des aktuellen Strukturelementes oder Objektes. Die Sicht muss dazu eine gewöhnliche Inspektion (keine Gebietsinspektion) sein (vgl. <<_sichten>>).
 
 * Referenzattribut-Angabe: Bezeichnet das Objekt, das vom aktuellen Objekt bzw. von der aktuellen Struktur aus über das gegebene Referenzattribut zugeordnet ist.
 
@@ -126,7 +126,7 @@ Beim Bezug auf ein Attribut, meint man den Wert des Attributes des Kontextobjekt
 
 * Handelt es sich um ein Koordinatenattribut bezeichnet man durch Angabe der Nummer der Achse die entsprechende Komponente der Koordinate. Die erste Komponente hat den Index 1.
 
-* Das implizite Attribut `AGGREGATES` ist in Aggregationssichten (vgl. Kapitel 2.15 Sichten) definiert und bezeichnet den Satz (`BAG OF`) der aggregierten Basisobjekte.
+* Das implizite Attribut `AGGREGATES` ist in Aggregationssichten (vgl. <<_sichten>>) definiert und bezeichnet den Satz (`BAG OF`) der aggregierten Basisobjekte.
 
 Bei geordneten Unterstrukturen (`LIST OF`) können einzelne Elemente angesprochen werden. Zulässige Indizes sind:
 
@@ -136,14 +136,14 @@ Bei geordneten Unterstrukturen (`LIST OF`) können einzelne Elemente angesproche
 
 * Index-Nummer: Der angegebene Index muss kleiner oder gleich der in der Kardinalität festgelegten maximalen Anzahl sein. Das erste Element hat den Index 1. Ist er kleiner oder gleich der in der Kardinalität festgelegten minimalen Anzahl, existiert immer ein entsprechendes Element; ist er grösser ist die Existenz des Elementes nicht gewährleistet. Der Faktor kann als Folge undefiniert werden.
 
-Ein Faktor kann auch eine Inspection sein (vgl. Kapitel 2.15 Sichten). Ist ihr ein Objektpfad vorangestellt, muss die damit gegebene Objektklasse mit derjenigen der Inspection übereinstimmen oder eine Erweiterung von dieser sein. Zur Menge der durch die Inspection gelieferten Strukturelemente gehören dann nur diejenigen, die zum Objekt gehören, das mit dem Objektpfad definiert ist.
+Ein Faktor kann auch eine Inspection sein (vgl. <<_sichten>>). Ist ihr ein Objektpfad vorangestellt, muss die damit gegebene Objektklasse mit derjenigen der Inspection übereinstimmen oder eine Erweiterung von dieser sein. Zur Menge der durch die Inspection gelieferten Strukturelemente gehören dann nur diejenigen, die zum Objekt gehören, das mit dem Objektpfad definiert ist.
 
 Faktoren können auch Funktionsaufrufe sein. Als ihre Argumente kommen in Frage:
 
 * Ausdrücke: Der Typ des Ergebnisses des Ausdrucks muss mit dem Argumenttyp kompatibel sein.
 
-* Wird mit dem Ausdruck eine Rollenangabe gemacht, bezeichnet der Ausdruck die Menge der über die Rolle verbundenen Zielobjekte. Beim formalen Parameter muss `OBJECT OF` oder `OBJECTS OF` (nur wenn auf Grund der Modellbeschreibung klar ist, dass nur ein Zielobjekt möglich ist) verlangt sein (vgl. Kapitel 2.14 Funktionen).
+* Wird mit dem Ausdruck eine Rollenangabe gemacht, bezeichnet der Ausdruck die Menge der über die Rolle verbundenen Zielobjekte. Beim formalen Parameter muss `OBJECT OF` oder `OBJECTS OF` (nur wenn auf Grund der Modellbeschreibung klar ist, dass nur ein Zielobjekt möglich ist) verlangt sein (vgl. <<_funktionen>>).
 
-* Alle Objekte (`ALL`) der Klasse in deren Kontext der Funktionsaufruf erfolgt oder alle Objekte der angegebenen Klasse. Beim formalen Parameter muss `OBJECTS OF` verlangt sein (vgl. Kapitel 2.14 Funktionen). Damit sind immer alle Objekte gemeint, die dieser Klasse oder ihren Erweiterungen entsprechen.
+* Alle Objekte (`ALL`) der Klasse in deren Kontext der Funktionsaufruf erfolgt oder alle Objekte der angegebenen Klasse. Beim formalen Parameter muss `OBJECTS OF` verlangt sein (vgl. <<_funktionen>>). Damit sind immer alle Objekte gemeint, die dieser Klasse oder ihren Erweiterungen entsprechen.
 
-Als Vergleichswerte kommen Funktionsaufrufe, Laufzeitparameter (vgl. Kapitel 2.16 Darstellungsbeschreibungen) und Konstanten in Frage.
+Als Vergleichswerte kommen Funktionsaufrufe, Laufzeitparameter (vgl. <<_darstellungsbeschreibungen>>) und Konstanten in Frage.

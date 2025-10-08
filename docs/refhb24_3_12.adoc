@@ -58,7 +58,7 @@ SET CONSTRAINT
   areAreas(ALL, >> Flaechen, >> F->Geometrie);
 END;
 ----
-Die Objekte der Klasse B, deren Art a ist, sollen wegen der Verwendung der Standardfunktion areAreas (vgl. Kapitel 2.14 Funktionen) ein Flächennetz bilden. Alle Flächen (gemäss Unterstruktur Flächen) der Objekte der Klasse C bilden eine Gebietseinteilung.
+Die Objekte der Klasse B, deren Art a ist, sollen wegen der Verwendung der Standardfunktion areAreas (vgl. <<_funktionen>>) ein Flächennetz bilden. Alle Flächen (gemäss Unterstruktur Flächen) der Objekte der Klasse C bilden eine Gebietseinteilung.
 ====
 
 Weitergehende Konsistenzbedingungen müssen mittels Sichten (z.B. Sicht, die eine bestimmte Klasse mit sich selbst verbindet und damit beliebige Attributkombinationen mit allen anderen Objekten der Klasse vergleichbar machen) definiert werden. Solche Sichten müssen zwingend innerhalb des Datenmodells definiert werden.
