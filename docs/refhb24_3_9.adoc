@@ -19,7 +19,7 @@ UNIT
 ----
 ====
 
-Durch INTERLIS selbst ist die abstrakte Einheit `ANYUNIT` definiert. Alle anderen Einheiten erben sie direkt oder indirekt (vgl. Kapitel 2.10.3 Referenzsysteme), ohne dass dies definiert werden muss. Folgende Einheiten sind durch INTERLIS direkt (d.h. intern) definiert:
+Durch INTERLIS selbst ist die abstrakte Einheit `ANYUNIT` definiert. Alle anderen Einheiten erben sie direkt oder indirekt (vgl. <<_referenzsysteme>>), ohne dass dies definiert werden muss. Folgende Einheiten sind durch INTERLIS direkt (d.h. intern) definiert:
 
 ----
 UNIT

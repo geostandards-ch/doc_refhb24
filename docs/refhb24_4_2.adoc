@@ -56,7 +56,7 @@ Für die Transferart UPDATE gelten ausserdem folgende zusätzlichen Transferrege
 
 * Ein UPDATE-Behälter ist für sich allein gesehen nicht konsistent, da Beziehungen meist nur zusammen mit der Vorgeschichte aufgelöst werden können.
 
-Ausserdem muss zu jedem Objekt die Nachlieferungsoperation angegeben werden (vgl. Kapitel 2.4.5 Behälter, Replikation und Datentransfer). Die Operationen INSERT, UPDATE und DELETE bedeuten folgendes:
+Ausserdem muss zu jedem Objekt die Nachlieferungsoperation angegeben werden (vgl. <<_behälter_replikation_und_datentransfer>>). Die Operationen INSERT, UPDATE und DELETE bedeuten folgendes:
 
 * Die Operation INSERT hat die Bedeutung von «neues Objekt einfügen» (insert object).
 

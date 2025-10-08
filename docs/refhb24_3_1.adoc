@@ -70,4 +70,4 @@ Damit dieser Umweg vermieden werden kann, wird folgende abgekürzte Schreibweise
 Example = 'CLASS' Class-Name '=' Classdef.
 ----
 
-Die Formel Class-Name wird nicht definiert. Syntaktisch kommt direkt die Regel "Name" zur Anwendung (vgl. Kapitel 2.2.2 Namen). Von der Bedeutung her ist der Name jedoch ein Klassenname. "Class" wird damit quasi zu einem Kommentar.
+Die Formel Class-Name wird nicht definiert. Syntaktisch kommt direkt die Regel "Name" zur Anwendung (vgl. <<_namen>>). Von der Bedeutung her ist der Name jedoch ein Klassenname. "Class" wird damit quasi zu einem Kommentar.

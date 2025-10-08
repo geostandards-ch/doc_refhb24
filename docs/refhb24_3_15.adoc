@@ -1,7 +1,7 @@
 === Sichten
 Sichten (Views) sind Klassen und Strukturen, deren Objekte nicht originär sondern virtuell sind, da sie aus Objekten anderer Sichten oder Klassen bzw. Strukturen abgeleitet werden. Sichten werden unter anderem dazu verwendet, die Grundlagen für Grafiken und spezielle Konsistenzbedingungen zu formulieren. Eine weitere Anwendung ist die Weitergabe der Daten an Empfängersysteme in einer abgeleiteten, in der Regel vereinfachten Form.
 
-Sichten werden nur transferiert, wenn sie in einem `VIEW TOPIC` definiert sind. In diesem Fall erfolgt ihre Übertragung wie der vollständige Transfer (Schlüsselwort `FULL`) von normalen Klassen, so dass sich ein Datenempfänger (vgl. Kapitel 3 Sequentieller Transfer) nicht darum zu kümmern braucht, wie die (virtuellen) Objekte erzeugt wurden. Sichten können auch explizit vom Transfer ausgeschlossen werden (`TRANSIENT`), wenn sie nur lokale Bedeutung haben, d.h. wenn sie nur als Basis für andere Sichten dienen. Die inkrementelle Nachlieferung von Sichten ist ausgeschlossen, da Sichtobjekten keine Objektidentifikation zugeordnet wird.
+Sichten werden nur transferiert, wenn sie in einem `VIEW TOPIC` definiert sind. In diesem Fall erfolgt ihre Übertragung wie der vollständige Transfer (Schlüsselwort `FULL`) von normalen Klassen, so dass sich ein Datenempfänger (vgl. <<_sequentieller_transfer>>) nicht darum zu kümmern braucht, wie die (virtuellen) Objekte erzeugt wurden. Sichten können auch explizit vom Transfer ausgeschlossen werden (`TRANSIENT`), wenn sie nur lokale Bedeutung haben, d.h. wenn sie nur als Basis für andere Sichten dienen. Die inkrementelle Nachlieferung von Sichten ist ausgeschlossen, da Sichtobjekten keine Objektidentifikation zugeordnet wird.
 
 Sichten können abstrakt (`ABSTRACT`) oder konkret sein. Konkrete Sichten können auch auf abstrakten Grundlagen beruhen. Dabei können aber nur diejenigen Grundlagenattribute angesprochen werden, die konkret sind. Ist dies nicht der Fall, muss die Sicht selbst als abstrakt erklärt werden.
 
@@ -43,13 +43,13 @@ Mit der _Verbindung_ (Schlüsselwort `JOIN OF`) wird das kartesische Produkt (od
 
 Die _Vereinigung_ (Schlüsselwort `UNION OF`) ermöglicht die Verschmelzung verschiedener Basis-Klassen zu einer einzigen Klasse. Einem Attribut der Vereinigungs-Sicht werden typischerweise die Attribute der verschiedenen Basis-Klassen zugewiesen. Der Attributtyp der Basis-Klasse muss mit demjenigen der Vereinigungs-Sicht verträglich sein (gleicher Typ oder Erweiterung davon).
 
-Mit der _Zusammenfassung_ (Schlüsselwort `AGGREGATION OF`) werden alle oder diejenigen Instanzen einer Basismenge zu einer Instanz zusammengefasst, bei denen die verlangte Attributkombination identisch ist. Innerhalb der Aggregationssicht steht mittels dem impliziten Attribut `AGGREGATES` (vgl. Kapitel 2.13 Ausdrücke) der zugehörige Satz von Originalobjekten als `BAG` zur Verfügung. Dieses implizite Attribut gehört nicht zu den eigentlichen Attributen der Sicht und wird darum auch dann nicht transferiert, wenn ein Transfer verlangt ist. Es kann z.B. einem entsprechenden Attribut der Aggregationssicht zugewiesen oder als Argument einer Funktion übergeben werden.
+Mit der _Zusammenfassung_ (Schlüsselwort `AGGREGATION OF`) werden alle oder diejenigen Instanzen einer Basismenge zu einer Instanz zusammengefasst, bei denen die verlangte Attributkombination identisch ist. Innerhalb der Aggregationssicht steht mittels dem impliziten Attribut `AGGREGATES` (vgl. <<_ausdrücke>>) der zugehörige Satz von Originalobjekten als `BAG` zur Verfügung. Dieses implizite Attribut gehört nicht zu den eigentlichen Attributen der Sicht und wird darum auch dann nicht transferiert, wenn ein Transfer verlangt ist. Es kann z.B. einem entsprechenden Attribut der Aggregationssicht zugewiesen oder als Argument einer Funktion übergeben werden.
 
 Mit der _Aufschlüsselung_ (Schlüsselwort `INSPECTION OF`) erhält man die Menge aller Strukturelemente (mit `BAG OF` oder `LIST OF` oder gemäss Linie, Einzelfläche oder Gebietseinteilung definierte), die zu einem (direkten oder indirekten) Unterstrukturattribut einer Objekt-Klasse gehören.
 
 Die normale Inspection auf ein Gebietseinteilungsattribut bzw. die Inspection eines Flächenattributs liefert die Ränder aller Gebiete bzw. Flächen dieser Klasse (Struktur SurfaceBoundary). Die Linienzüge jedes Randes (Struktur SurfaceEdge) werden dabei so gebildet, dass ihre Anzahl minimal ist. Aufeinanderfolgende Linienzüge werden also zu einem Linienzug zusammengefasst. Wird eine weitere Inspection auf das Attribut Lines gemacht, erhält man ebenfalls alle Linienzüge (Struktur SurfaceEdge). Auf diese Art kommen sie aber im Falle der Gebietseinteilung doppelt vor (einmal für jedes beteiligte Gebietsobjekt).
 
-Mit der Inspection einer Gebietseinteilung (Schlüsselwort `AREA INSPECTION OF`) erhält man die Linienzüge der Ränder der zur Gebietseinteilung gehörenden Gebiete genau einmal (als Struktur SurfaceEdge). Die beiden Gebiete, die von einem gemeinsamen Linienzug berandet werden, können mit `THISAREA` bzw. `THATAREA` angesprochen werden (vgl. Kapitel 2.13 Ausdrücke). Die Linienzüge (Struktur SurfaceEdge) werden wie bei der normalen Inspection möglichst zusammengefasst geliefert.
+Mit der Inspection einer Gebietseinteilung (Schlüsselwort `AREA INSPECTION OF`) erhält man die Linienzüge der Ränder der zur Gebietseinteilung gehörenden Gebiete genau einmal (als Struktur SurfaceEdge). Die beiden Gebiete, die von einem gemeinsamen Linienzug berandet werden, können mit `THISAREA` bzw. `THATAREA` angesprochen werden (vgl. <<_ausdrücke>>). Die Linienzüge (Struktur SurfaceEdge) werden wie bei der normalen Inspection möglichst zusammengefasst geliefert.
 
 ----
 STRUCTURE SurfaceEdge =
@@ -171,7 +171,7 @@ NOTE: Obiger Satz erscheint in leicht abgeänderter Form doppelt im Referenzhand
 
 Bei Vereinigungen muss für jedes Attribut vollständig angegeben werden, aus welchen Attributen der Basis-Klassen es abgeleitet wird. Ein Attribut muss sich aber nicht auf alle Basis-Klassen beziehen, sofern der Attributtyp undefinierte Werte zulässt. Für die fehlenden Basis-Objekte gilt es als undefiniert.
 
-Das folgende Beispiel zeigt, wie eine Sicht beschrieben werden kann, die ermöglicht, mit Hilfe des Konstrukts `DERIVED FROM` eine eigentliche Beziehung zu definieren (vgl. Kapitel 2.7. Eigentliche Beziehungen).
+Das folgende Beispiel zeigt, wie eine Sicht beschrieben werden kann, die ermöglicht, mit Hilfe des Konstrukts `DERIVED FROM` eine eigentliche Beziehung zu definieren (vgl. <<_eigentliche_beziehungen>>).
 
 ====
 ----
